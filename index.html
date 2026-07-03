@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>康陶kangtao</title>
+    <title>康陶 KANG TAO</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600;800;900&family=Plus+Jakarta+Sans:wght@500;700&family=Noto+Sans+SC:wght@500;700;900&family=Share+Tech+Mono&display=swap" rel="stylesheet">
@@ -47,7 +47,7 @@
             pointer-events: none;
         }
 
-        /* --- NAVIGATION --- */
+        /* --- GLOBAL NAVIGATION STRUCT --- */
         nav {
             width: 100%;
             border-bottom: 1px solid var(--border-color);
@@ -56,16 +56,18 @@
             position: sticky;
             top: 0;
             z-index: 100;
-            padding: 1.2rem 2rem;
+            padding: 0 2rem;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* Upper Layer: Logo & Right Aligned Slider */
+        .nav-top-row {
             display: flex;
             justify-content: space-between;
             align-items: center;
-        }
-
-        .nav-left {
-            display: flex;
-            align-items: center;
-            gap: 2rem;
+            padding: 1.2rem 0 1rem 0;
+            width: 100%;
         }
 
         .nav-logo {
@@ -77,7 +79,47 @@
         }
 
         .nav-logo .zh { font-family: 'Noto Sans SC'; font-size: 1.8rem; font-weight: 900; letter-spacing: -1px; }
-        .nav-logo .en { font-family: 'Orbitron'; font-size: 1.3rem; font-weight: 900; margin-left: 4px; padding-bottom: 1px; letter-spacing: -1px; }
+        .nav-logo .en { font-family: 'Orbitron'; font-size: 1.3rem; font-weight: 900; margin-left: 8px; padding-bottom: 1px; letter-spacing: 0px; }
+
+        /* Language Slider Absolute Top Right alignment placement */
+        .lang-switch {
+            font-family: 'Orbitron', 'Noto Sans SC', sans-serif;
+            font-size: 0.75rem;
+            letter-spacing: 1px;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--text-muted);
+            flex-shrink: 0;
+        }
+
+        .lang-btn {
+            background: none;
+            border: none;
+            color: var(--text-muted);
+            cursor: pointer;
+            font-weight: 700;
+            transition: color 0.3s;
+            padding: 0.2rem 0.4rem;
+        }
+
+        .lang-btn.active {
+            color: var(--orange-primary);
+            text-shadow: 0 0 10px var(--orange-glow);
+        }
+
+        .lang-btn:hover:not(.active) {
+            color: #ffffff;
+        }
+
+        /* Bottom Layer: Main System Functional Routing Links */
+        .nav-bottom-row {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding-bottom: 0.8rem;
+            width: 100%;
+        }
 
         .nav-links {
             display: flex;
@@ -113,36 +155,6 @@
             background: rgba(255, 85, 0, 0.03);
         }
 
-        /* --- LANGUAGE TOGGLE --- */
-        .lang-switch {
-            font-family: 'Orbitron', 'Noto Sans SC', sans-serif;
-            font-size: 0.75rem;
-            letter-spacing: 1px;
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-            color: var(--text-muted);
-        }
-
-        .lang-btn {
-            background: none;
-            border: none;
-            color: var(--text-muted);
-            cursor: pointer;
-            font-weight: 700;
-            transition: color 0.3s;
-            padding: 0.2rem 0.4rem;
-        }
-
-        .lang-btn.active {
-            color: var(--orange-primary);
-            text-shadow: 0 0 10px var(--orange-glow);
-        }
-
-        .lang-btn:hover:not(.active) {
-            color: #ffffff;
-        }
-
         .accent-white { color: #ffffff; }
         .accent-orange { color: var(--orange-primary); text-shadow: 0 0 15px var(--orange-glow); }
 
@@ -174,7 +186,7 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            min-height: 55vh;
+            min-height: 50vh;
             width: 100%;
         }
 
@@ -209,7 +221,7 @@
         }
 
         .zh-text { font-family: 'Noto Sans SC'; font-size: 4.5rem; font-weight: 900; letter-spacing: -3px; }
-        .en-text { font-family: 'Orbitron'; font-size: 3.2rem; font-weight: 900; letter-spacing: -2px; margin-left: 10px; padding-bottom: 4px; }
+        .en-text { font-family: 'Orbitron'; font-size: 3.2rem; font-weight: 900; letter-spacing: 0px; margin-left: 14px; padding-bottom: 4px; }
 
         .slogan-container { display: flex; align-items: center; width: 100%; max-width: 540px; gap: 16px; }
         .orange-line { flex-grow: 1; height: 1px; background-color: var(--orange-primary); box-shadow: 0 0 6px var(--orange-glow); }
@@ -324,7 +336,7 @@
             text-align: left; 
         }
 
-        /* --- MULTILANG DISPLAYS --- */
+        /* --- MULTILANG SWITCH DEFAULTS --- */
         [data-lang="zh"] {
             display: none;
         }
@@ -335,16 +347,18 @@
         }
 
         @media (max-width: 768px) {
-            nav { padding: 1.2rem 1rem; flex-direction: column; gap: 1.2rem; }
-            .nav-left { flex-direction: column; gap: 1rem; width: 100%; }
+            nav { padding: 1rem; }
+            .nav-top-row { flex-direction: row; justify-content: space-between; padding: 0.5rem 0 1rem 0; }
+            .nav-bottom-row { padding-bottom: 0.5rem; }
+            
             .nav-links { gap: 0.2rem; flex-wrap: wrap; justify-content: center; width: 100%; }
             .nav-links button { padding: 0.5rem 0.6rem; font-size: 0.7rem; }
             .system-grid { grid-template-columns: 1fr; gap: 1rem; }
             
             main { padding: 2rem 1rem; }
             .container { padding: 4rem 1.5rem 3rem 1.5rem; }
-            .zh-text { font-size: 3rem; letter-spacing: -1.5px; }
-            .en-text { font-size: 2.2rem; letter-spacing: -1px; margin-left: 6px; padding-bottom: 2px; }
+            .zh-text { font-size: 3rem; letter-spacing: -1px; }
+            .en-text { font-size: 2.2rem; letter-spacing: 0px; margin-left: 10px; padding-bottom: 2px; }
             .slogan-sub { font-size: 0.8rem; letter-spacing: 4px; }
             .slogan-container { gap: 10px; }
             
@@ -358,15 +372,26 @@
 </head>
 <body>
 
-    <!-- Integrated Structural Navigation Header -->
+    <!-- Integrated Structural Navigation Header Matrix -->
     <nav>
-        <div class="nav-left">
+        <!-- Top Row Segment: Branding and Upper-Right Language Toggle Anchor -->
+        <div class="nav-top-row">
             <div class="nav-logo" onclick="switchTab('overview')">
                 <span class="zh accent-white">康</span>
                 <span class="zh accent-orange">陶</span>
                 <span class="en accent-white">KANG</span>
                 <span class="en accent-orange">TAO</span>
             </div>
+            
+            <div class="lang-switch">
+                <button id="lang-en" class="lang-btn active" onclick="setLanguage('en')">ENG</button>
+                <span>|</span>
+                <button id="lang-zh" class="lang-btn" onclick="setLanguage('zh')">中文</button>
+            </div>
+        </div>
+
+        <!-- Bottom Row Segment: Dedicated Modular Content Router Controls -->
+        <div class="nav-bottom-row">
             <ul class="nav-links">
                 <li>
                     <button id="btn-overview" class="active" onclick="switchTab('overview')">
@@ -399,11 +424,6 @@
                     </button>
                 </li>
             </ul>
-        </div>
-        <div class="lang-switch">
-            <button id="lang-en" class="lang-btn active" onclick="setLanguage('en')">ENG</button>
-            <span>|</span>
-            <button id="lang-zh" class="lang-btn" onclick="setLanguage('zh')">中文</button>
         </div>
     </nav>
 
@@ -492,12 +512,12 @@
                         <span class="card-id">KT-DF01 // NEURAL BARRIER</span>
                         <h3 class="card-title">
                             <span data-lang="en">Aegis Grid Overhaul</span>
-                            <span data-lang="zh">宙斯盾网格系统</span>
+                            <span data-lang="zh">宙斯盾网格升级系统</span>
                         </h3>
                     </div>
                     <p class="card-desc">
                         <span data-lang="en">Hardware-based sub-dermal shield buffers that counter external tracking and jam rogue electronic interception vectors completely.</span>
-                        <span data-lang="zh">基于硬件的皮下防御缓冲器，全面对抗外部追踪并彻底干扰恶意电子拦截矢量。</span>
+                        <span data-lang="zh">基于硬件的皮下防御缓冲层，全面对抗外部追踪并彻底干扰恶意电子拦截矢量。</span>
                     </p>
                 </div>
                 <div class="tech-card">
@@ -505,12 +525,12 @@
                         <span class="card-id">KT-DF02 // HARDWARE MASKING</span>
                         <h3 class="card-title">
                             <span data-lang="en">ICE-Wall Fortification</span>
-                            <span data-lang="zh">ICE防火墙加固</span>
+                            <span data-lang="zh">ICE防火墙全面加固</span>
                         </h3>
                     </div>
                     <p class="card-desc">
                         <span data-lang="en">Military-grade cryptographic firmware protections guarding corporate cybernetic links against invasive neural architecture breaches.</span>
-                        <span data-lang="zh">军工级加密固件保护层，悍卫企业内部网络连接不受侵入式神经架构漏洞的威胁。</span>
+                        <span data-lang="zh">军工级加密固件保护层，捍卫企业内部网络连接不受侵入式神经架构漏洞的威胁。</span>
                     </p>
                 </div>
                 <div class="tech-card">
@@ -624,7 +644,7 @@
         <!-- Grounded Bottom Footer Baseline -->
         <div class="footer-row">
             <div class="tagline">
-                <span data-lang="en">this is kangtao. This is intelligence.</span>
+                <span data-lang="en">THIS IS KANGTAO. THIS IS INTELLIGENCE.</span>
                 <span data-lang="zh">这就是康陶。这就是智能。</span>
             </div>
         </div>
@@ -643,11 +663,9 @@
         }
 
         function setLanguage(lang) {
-            // Toggle language buttons active class
             document.querySelectorAll('.lang-btn').forEach(btn => btn.classList.remove('active'));
             document.getElementById('lang-' + lang).classList.add('active');
 
-            // Handle DOM element display visibility switches
             if (lang === 'zh') {
                 document.querySelectorAll('[data-lang="en"]').forEach(el => el.style.display = 'none');
                 document.querySelectorAll('[data-lang="zh"]').forEach(el => el.style.display = 'inline-block');
