@@ -3,21 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>KANGTAO | Under Construction</title>
+    <title>KANGTAO | System Offline</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <!-- Premium modern tech fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700;900&family=Plus+Jakarta+Sans:wght@300;400;600;800&display=swap" rel="stylesheet">
-    
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700;900&family=Plus+Jakarta+Sans:wght@400;500;600&family=Noto+Sans+SC:wght@400;700&display=swap" rel="stylesheet">
     <style>
         :root {
-            --bg-color: #080808;
-            --surface-color: #111111;
+            --bg-color: #060606;
+            --surface-color: #0f0f11;
             --orange-primary: #ff5500;
-            --orange-hover: #d44600;
             --text-main: #ffffff;
-            --text-muted: #888888;
-            --border-color: #222222;
+            --text-muted: #707075;
+            --border-color: #222226;
         }
 
         * {
@@ -29,7 +26,7 @@
         body {
             background-color: var(--bg-color);
             color: var(--text-main);
-            font-family: 'Plus Jakarta Sans', sans-serif;
+            font-family: 'Plus Jakarta Sans', 'Noto Sans SC', sans-serif;
             min-height: 100vh;
             display: flex;
             justify-content: center;
@@ -38,333 +35,163 @@
             position: relative;
         }
 
-        /* Subtle cybertech background grid pattern */
+        /* Ambient background grid & glow */
         body::before {
             content: '';
             position: absolute;
             inset: 0;
             background-image: 
-                linear-gradient(rgba(255, 85, 0, 0.03) 1px, transparent 1px),
-                linear-gradient(90deg, rgba(255, 85, 0, 0.03) 1px, transparent 1px);
+                linear-gradient(rgba(255, 85, 0, 0.02) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(255, 85, 0, 0.02) 1px, transparent 1px);
             background-size: 40px 40px;
             background-position: center;
             z-index: 0;
         }
 
-        /* Glowing ambient light behind the container */
-        .ambient-glow {
+        body::after {
+            content: '';
             position: absolute;
-            width: 400px;
-            height: 400px;
-        fr    background: var(--orange-primary);
+            width: 450px;
+            height: 450px;
+            background: var(--orange-primary);
             filter: blur(180px);
-            opacity: 0.12;
-            pointer-events: none;
+            opacity: 0.08;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
             z-index: 0;
         }
 
+        /* Main Container with bottom fading shadow */
         .container {
-            background: var(--surface-color);
-            border: 1px solid var(--border-color);
-            padding: 3.5rem 2.5rem;
-            border-radius: 20px;
+            background: linear-gradient(180deg, var(--surface-color) 0%, rgba(15, 15, 17, 0.85) 80%, rgba(6, 6, 6, 0) 100%);
+            border-top: 1px solid var(--border-color);
+            border-left: 1px solid var(--border-color);
+            border-right: 1px solid var(--border-color);
+            border-bottom: 1px solid transparent;
+            padding: 4.5rem 3rem 5rem 3rem;
+            border-radius: 20px 20px 0 0;
             text-align: center;
-            max-width: 520px;
-            width: 90%;
-            box-shadow: 0 30px 60px rgba(0, 0, 0, 0.8), 
-                        0 0 50px rgba(255, 85, 0, 0.02);
+            max-width: 600px;
+            width: 92%;
             position: relative;
             z-index: 1;
-            backdrop-filter: blur(20px);
+            backdrop-filter: blur(12px);
         }
 
-        /* Tech corner brackets for a futuristic aesthetic */
-        .container::before, .container::after {
-            content: '';
-            position: absolute;
-            width: 15px;
-            height: 15px;
-            border-color: var(--orange-primary);
-            border-style: solid;
-            opacity: 0.7;
-        }
-        .container::before {
-            top: 20px;
-            left: 20px;
-            border-width: 2px 0 0 2px;
-        }
-        .container::after {
-            bottom: 20px;
-            right: 20px;
-            border-width: 0 2px 2px 0;
+        /* Branding Header Group */
+        .brand-header-group {
+            margin-bottom: 2.5rem;
         }
 
-        /* Brand Logo Style */
-        .logo {
-            font-family: 'Orbitron', sans-serif;
-            font-size: 2.8rem;
+        .brand-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 1rem;
+            margin-bottom: 0.6rem;
+        }
+
+        /* Logo Styling */
+        .logo-zh, .logo-en {
+            font-family: 'Orbitron', 'Noto Sans SC', sans-serif;
+            font-size: 2.6rem;
             font-weight: 900;
-            color: var(--text-main);
-            margin-bottom: 0.5rem;
+            letter-spacing: 1px;
+        }
+
+        .logo-zh {
+            font-weight: 700;
             letter-spacing: 4px;
+        }
+
+        .white-text {
+            color: var(--text-main);
+        }
+
+        .orange-text {
+            color: var(--orange-primary);
+            text-shadow: 0 0 20px rgba(255, 85, 0, 0.25);
+        }
+
+        /* Slogan underneath logo */
+        .slogan {
+            font-family: 'Noto Sans SC', sans-serif;
+            font-size: 0.85rem;
+            font-weight: 400;
+            color: rgba(255, 255, 255, 0.5);
+            letter-spacing: 6px;
+            text-indent: 6px; /* Offsets letter-spacing tracking to center properly */
             text-transform: uppercase;
         }
 
-        .logo span {
-            color: var(--orange-primary);
-            text-shadow: 0 0 15px rgba(255, 85, 0, 0.4);
-        }
-
+        /* Timeline Badge */
         .status-badge {
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            background: rgba(255, 85, 0, 0.08);
+            display: inline-block;
+            background: rgba(255, 85, 0, 0.07);
             border: 1px solid rgba(255, 85, 0, 0.25);
             color: var(--orange-primary);
-            padding: 0.5rem 1.2rem;
-            border-radius: 50px;
+            padding: 0.4rem 1.2rem;
+            border-radius: 4px;
             font-size: 0.8rem;
-            font-weight: 700;
+            font-weight: 600;
+            font-family: 'Orbitron', sans-serif;
             margin-bottom: 2rem;
-            letter-spacing: 1.5px;
+            letter-spacing: 2px;
             text-transform: uppercase;
-        }
-
-        .status-badge::before {
-            content: '';
-            display: inline-block;
-            width: 8px;
-            height: 8px;
-            background-color: var(--orange-primary);
-            border-radius: 50%;
-            animation: pulse 1.8s infinite;
-        }
-
-        @keyframes pulse {
-            0% { transform: scale(0.9); opacity: 0.6; box-shadow: 0 0 0 0 rgba(255, 85, 0, 0.5); }
-            50% { transform: scale(1.1); opacity: 1; box-shadow: 0 0 0 8px rgba(255, 85, 0, 0); }
-            100% { transform: scale(0.9); opacity: 0.6; box-shadow: 0 0 0 0 rgba(255, 85, 0, 0); }
         }
 
         h2 {
-            font-size: 1.6rem;
+            font-size: 1.4rem;
             margin-bottom: 1rem;
-            font-weight: 600;
-            letter-spacing: -0.5px;
+            font-weight: 500;
+            letter-spacing: 0.5px;
+            color: #ececee;
         }
 
         p {
             color: var(--text-muted);
             font-size: 0.95rem;
-            line-height: 1.6;
-            margin-bottom: 2.5rem;
+            line-height: 1.7;
+            max-width: 440px;
+            margin: 0 auto 4.5rem auto;
         }
 
-        /* Countdown Design */
-        .countdown {
-            display: flex;
-            justify-content: space-between;
-            margin-bottom: 2.5rem;
-            gap: 12px;
-        }
-
-        .countdown-item {
-            background: rgba(0, 0, 0, 0.5);
-            border: 1px solid var(--border-color);
-            padding: 1rem 0.5rem;
-            border-radius: 12px;
-            flex: 1;
-            min-width: 75px;
-            position: relative;
-        }
-
-        .countdown-number {
-            display: block;
+        /* Bottom Tagline Styling */
+        .tagline {
             font-family: 'Orbitron', sans-serif;
-            font-size: 1.8rem;
+            font-size: 0.75rem;
             font-weight: 700;
-            color: var(--orange-primary);
-        }
-
-        .countdown-label {
-            font-size: 0.7rem;
-            color: var(--text-muted);
+            color: rgba(255, 255, 255, 0.25);
+            letter-spacing: 3px;
             text-transform: uppercase;
-            letter-spacing: 1px;
-            margin-top: 6px;
-            display: block;
-            font-weight: 600;
+            border-top: 1px solid rgba(255, 255, 255, 0.04);
+            padding-top: 1.8rem;
         }
-
-        /* Notification Capture Form */
-        .subscribe-form {
-            display: flex;
-            flex-direction: column;
-            gap: 10px;
-        }
-
-        .input-group {
-            display: flex;
-            background: rgba(0, 0, 0, 0.4);
-            border: 1px solid var(--border-color);
-            border-radius: 10px;
-            padding: 5px;
-            transition: all 0.3s ease;
-        }
-
-        .input-group:focus-within {
-            border-color: var(--orange-primary);
-            box-shadow: 0 0 15px rgba(255, 85, 0, 0.15);
-        }
-
-        input[type="email"] {
-            background: transparent;
-            border: none;
-            outline: none;
-            color: white;
-            padding: 0.8rem 1rem;
-            flex-grow: 1;
-            font-size: 0.95rem;
-            font-family: inherit;
-        }
-
-        input[type="email"]::placeholder {
-            color: #444444;
-        }
-
-        button {
-            background: var(--orange-primary);
-            color: white;
-            border: none;
-            outline: none;
-            padding: 0 1.8rem;
-            border-radius: 8px;
-            font-weight: 700;
-            font-size: 0.9rem;
-            font-family: inherit;
-            cursor: pointer;
-            transition: all 0.2s ease;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-        }
-
-        button:hover {
-            background: var(--orange-hover);
-            box-shadow: 0 0 15px rgba(255, 85, 0, 0.3);
-        }
-
-        button:active {
-            transform: scale(0.97);
-        }
-
-        .message {
-            margin-top: 12px;
-            font-size: 0.85rem;
-            min-height: 20px;
-            font-weight: 600;
-            transition: color 0.3s;
-        }
-
-        .success { color: #00ff88; }
-        .error { color: #ff3b3b; }
     </style>
 </head>
 <body>
 
-    <div class="ambient-glow"></div>
-
     <div class="container">
-        <!-- Upgraded logo to KANGTAO -->
-        <div class="logo">KANG<span>TAO</span></div>
-        <div class="status-badge">System Offline</div>
-
-        <h2>New protocols are loading.</h2>
-        <p>Our secure grid interface is currently undergoing system modifications. Enter your communications address below to obtain clearance notifications upon system activation.</p>
-
-        <!-- Countdown Timer -->
-        <div class="countdown">
-            <div class="countdown-item">
-                <span class="countdown-number" id="days">00</span>
-                <span class="countdown-label">Days</span>
+        <!-- Brand Identity Group -->
+        <div class="brand-header-group">
+            <div class="brand-container">
+                <div class="logo-zh"><span class="white-text">康</span><span class="orange-text">陶</span></div>
+                <div class="logo-en"><span class="white-text">KANG</span><span class="orange-text">TAO</span></div>
             </div>
-            <div class="countdown-item">
-                <span class="countdown-number" id="hours">00</span>
-                <span class="countdown-label">Hours</span>
-            </div>
-            <div class="countdown-item">
-                <span class="countdown-number" id="minutes">00</span>
-                <span class="countdown-label">Mins</span>
-            </div>
-            <div class="countdown-item">
-                <span class="countdown-number" id="seconds">00</span>
-                <span class="countdown-label">Secs</span>
-            </div>
+            <!-- Subtitle directly below logo -->
+            <div class="slogan">智能电子解决方案</div>
         </div>
 
-        <!-- Notification Form -->
-        <form class="subscribe-form" id="notifyForm" onsubmit="handleSubscribe(event)">
-            <div class="input-group">
-                <input type="email" id="emailInput" placeholder="Secure email connection point" required>
-                <button type="submit">Connect</button>
-            </div>
-            <div class="message" id="formMessage"></div>
-        </form>
+        <!-- Launch Timeline -->
+        <div class="status-badge">Deployment // Q3 2026</div>
+
+        <h2>Next-Generation Infrastructure Loading</h2>
+        <p>Our corporate web architecture is undergoing scheduled deployment upgrades. Full network systems will initialize shortly.</p>
+
+        <!-- Bottom Tagline -->
+        <div class="tagline">this is kangtao. This is intelligence.</div>
     </div>
 
-    <script>
-        // --- COUNTDOWN SETUP ---
-        const launchDate = new Date();
-        launchDate.setDate(launchDate.getDate() + 24); // Set to 24 days countdown
-
-        function updateCountdown() {
-            const now = new Date().getTime();
-            const distance = launchDate - now;
-
-            if (distance < 0) {
-                document.querySelector(".countdown").innerHTML = "<h3>SYSTEMS ARE ONLINE</h3>";
-                return;
-            }
-
-            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-            document.getElementById("days").innerText = String(days).padStart(2, '0');
-            document.getElementById("hours").innerText = String(hours).padStart(2, '0');
-            document.getElementById("minutes").innerText = String(minutes).padStart(2, '0');
-            document.getElementById("seconds").innerText = String(seconds).padStart(2, '0');
-        }
-
-        updateCountdown();
-        setInterval(updateCountdown, 1000);
-
-
-        // --- FORM HANDLING ---
-        function handleSubscribe(event) {
-            event.preventDefault();
-            const email = document.getElementById("emailInput").value;
-            const messageElement = document.getElementById("formMessage");
-            const button = event.target.querySelector("button");
-
-            if (email) {
-                button.disabled = true;
-                button.innerText = "Syncing...";
-                
-                // Simulate saving process
-                setTimeout(() => {
-                    messageElement.textContent = "Clearance granted. We will ping you when active. 📡";
-                    messageElement.className = "message success";
-                    document.getElementById("emailInput").value = "";
-                    button.disabled = false;
-                    button.innerText = "Connect";
-                }, 1000);
-            } else {
-                messageElement.textContent = "Error: Invalid communication protocol.";
-                messageElement.className = "message error";
-            }
-        }
-    </script>
 </body>
 </html>
