@@ -9,7 +9,7 @@
     <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='%23060606'/%3E%3Cpolygon points='15,20 92,20 85,80 8,80' fill='%23ff5500'/%3E%3Ctext x='47%25' y='55%25' font-family='Noto Sans SC, sans-serif' font-weight='900' font-size='42' fill='%23060606' text-anchor='middle' dominant-baseline='central'%3E康陶%3C/text%3E%3C/svg%3E">
 
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600;800;900&family=Plus+Jakarta+Sans:wght@500;700&family=Noto+Sans+SC:wght@500;700;900&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Noto+Sans+SC:wght@400;500;700;900&family=Share+Tech+Mono&display=swap" rel="stylesheet">
     <style>
         :root {
             --bg-color: #060606;
@@ -50,6 +50,7 @@
             pointer-events: none;
         }
 
+        /* --- STREAMING_CHUNK: Styling the top banner announcement links... --> */
         /* --- TOP SHOP ANNOUNCEMENT BANNER --- */
         .top-shop-banner {
             width: 100%;
@@ -62,9 +63,9 @@
         }
 
         .top-shop-banner a {
-            font-family: 'Orbitron', 'Noto Sans SC', sans-serif;
+            font-family: 'Plus Jakarta Sans', 'Noto Sans SC', sans-serif;
             font-size: 0.72rem;
-            font-weight: 700;
+            font-weight: 600;
             color: var(--text-muted);
             text-decoration: none;
             text-transform: uppercase;
@@ -124,7 +125,7 @@
 
         /* Language Slider */
         .lang-switch {
-            font-family: 'Orbitron', 'Noto Sans SC', sans-serif;
+            font-family: 'Plus Jakarta Sans', sans-serif;
             font-size: 0.75rem;
             letter-spacing: 1px;
             display: flex;
@@ -166,7 +167,7 @@
             display: flex;
             gap: 0.5rem;
             list-style: none;
-            font-family: 'Orbitron', 'Noto Sans SC', sans-serif;
+            font-family: 'Plus Jakarta Sans', 'Noto Sans SC', sans-serif;
             font-size: 0.75rem;
             letter-spacing: 1.5px;
         }
@@ -181,6 +182,7 @@
             font-family: inherit;
             font-size: inherit;
             letter-spacing: inherit;
+            font-weight: 600;
             padding: 0.5rem 1rem;
             border-radius: 4px;
         }
@@ -194,6 +196,7 @@
             color: var(--orange-primary);
             border-color: rgba(255, 85, 0, 0.2);
             background: rgba(255, 85, 0, 0.03);
+            font-weight: 700;
         }
 
         .accent-white { color: #ffffff; }
@@ -208,7 +211,7 @@
             z-index: 1;
         }
 
-        /* --- STREAMING_CHUNK: Styling layout grids and cards... --> */
+        /* --- STREAMING_CHUNK: Styling layout grids and tab transitions... --> */
         /* --- TAB LAYER TRANSITIONS --- */
         .tab-panel {
             display: none;
@@ -281,11 +284,12 @@
             background: rgba(15, 15, 17, 0.8);
             padding: 0.6rem 2.2rem;
             font-size: 0.85rem;
-            font-weight: 800;
+            font-weight: 700;
             text-transform: uppercase;
             letter-spacing: 3px;
             border-radius: 4px;
             color: #ffffff;
+            font-family: 'Plus Jakarta Sans', sans-serif;
             box-shadow: -2px 0 8px rgba(255, 0, 0, 0.5), 0px 0 8px rgba(0, 255, 0, 0.3), 2px 0 8px rgba(0, 102, 255, 0.5);
             animation: rgbShift 4s infinite linear;
         }
@@ -296,13 +300,14 @@
             66% { box-shadow: -2px 2px 10px rgba(0,102,255,0.5), 2px -2px 10px rgba(0,255,0,0.5); }
         }
 
-        .timeline-text { color: var(--orange-primary); font-family: 'Orbitron', 'Noto Sans SC', sans-serif; font-size: 1rem; font-weight: 700; letter-spacing: 2px; }
+        .timeline-text { color: var(--orange-primary); font-family: 'Plus Jakarta Sans', 'Noto Sans SC', sans-serif; font-size: 0.95rem; font-weight: 600; letter-spacing: 2px; }
 
         /* --- MODERN GRID MODULE MATRIX --- */
         .section-title {
-            font-family: 'Orbitron', 'Noto Sans SC', sans-serif;
+            font-family: 'Plus Jakarta Sans', 'Noto Sans SC', sans-serif;
+            font-weight: 700;
             font-size: 1.3rem;
-            letter-spacing: 4px;
+            letter-spacing: 2px;
             text-transform: uppercase;
             margin-bottom: 3rem;
             border-left: 4px solid var(--orange-primary);
@@ -354,9 +359,10 @@
 
         .card-meta { display: flex; flex-direction: column; gap: 0.4rem; margin-bottom: 1.5rem; }
         .card-id { font-family: 'Share Tech Mono'; color: var(--orange-primary); font-size: 0.8rem; letter-spacing: 1px; }
-        .card-title { font-family: 'Orbitron', 'Noto Sans SC', sans-serif; font-size: 1.3rem; font-weight: 800; color: #ffffff; }
-        .card-desc { color: var(--text-muted); font-size: 0.88rem; line-height: 1.6; font-weight: 500; }
+        .card-title { font-family: 'Plus Jakarta Sans', 'Noto Sans SC', sans-serif; font-size: 1.25rem; font-weight: 700; color: #ffffff; }
+        .card-desc { color: var(--text-muted); font-family: 'Plus Jakarta Sans', 'Noto Sans SC', sans-serif; font-size: 0.88rem; line-height: 1.6; font-weight: 400; }
 
+        /* --- STREAMING_CHUNK: Styling footer baseline and help links... --> */
         /* --- GEOMETRIC FOOTER FRAMEWORK --- */
         .footer-row {
             display: flex;
@@ -366,23 +372,23 @@
             border-top: 1px solid rgba(255, 255, 255, 0.03);
             padding-top: 2.5rem;
             margin-top: 6rem;
+            margin-bottom: 1rem;
         }
 
         .tagline { 
-            font-family: 'Orbitron', 'Noto Sans SC', sans-serif; 
-            font-size: 0.85rem; 
-            font-weight: 700; 
+            font-family: 'Plus Jakarta Sans', 'Noto Sans SC', sans-serif; 
+            font-size: 0.8rem; 
+            font-weight: 600; 
             color: rgba(255, 255, 255, 0.2); 
-            letter-spacing: 4px; 
+            letter-spacing: 3px; 
             text-transform: uppercase; 
             text-align: left; 
         }
 
-        /* --- STREAMING_CHUNK: Styling the 2077 portal link element... --> */
         .portal-link a {
-            font-family: 'Orbitron', 'Noto Sans SC', sans-serif;
-            font-size: 0.72rem;
-            font-weight: 700;
+            font-family: 'Plus Jakarta Sans', 'Noto Sans SC', sans-serif;
+            font-size: 0.8rem;
+            font-weight: 600;
             color: rgba(255, 255, 255, 0.25);
             text-decoration: none;
             letter-spacing: 2px;
@@ -391,6 +397,32 @@
         }
 
         .portal-link a:hover {
+            color: var(--orange-primary);
+            text-shadow: 0 0 8px var(--orange-glow);
+        }
+
+        /* Dynamic Non-Intimidating Normal Font Help Bottom Bar Section */
+        .footer-help-row {
+            width: 100%;
+            text-align: center;
+            padding: 1.5rem 0 3rem 0;
+            border-top: 1px solid rgba(255, 255, 255, 0.02);
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            font-size: 0.78rem;
+            font-weight: 400;
+            color: var(--text-muted);
+            letter-spacing: 0.5px;
+        }
+
+        .help-link {
+            color: var(--text-muted);
+            text-decoration: underline;
+            text-underline-offset: 3px;
+            transition: color 0.3s ease, text-shadow 0.3s ease;
+            font-weight: 500;
+        }
+
+        .help-link:hover {
             color: var(--orange-primary);
             text-shadow: 0 0 8px var(--orange-glow);
         }
@@ -429,6 +461,7 @@
             .footer-row { padding-top: 2rem; margin-top: 4rem; flex-direction: column; gap: 1rem; justify-content: center; }
             .tagline { font-size: 0.65rem; letter-spacing: 2.5px; text-align: center; }
             .portal-link { text-align: center; }
+            .footer-help-row { padding-bottom: 2rem; }
         }
     </style>
 </head>
@@ -601,7 +634,7 @@
                     </div>
                     <p class="card-desc">
                         <span data-lang="en">Hardware-based sub-dermal shield buffers that counter external tracking and jam rogue electronic interception vectors completely.</span>
-                        <span data-lang="zh">基于硬件的皮下防御缓冲系统，可全面拦截外部追踪并彻底干扰恶意的电子截获矢量。</span>
+                        <span data-lang="zh">基于硬件 of 皮下防御缓冲系统，可全面拦截外部追踪并彻底干扰恶意的电子截获矢量。</span>
                     </p>
                 </div>
                 <div class="tech-card">
@@ -712,7 +745,7 @@
                     </div>
                     <p class="card-desc">
                         <span data-lang="en">An elite hyper-tuned cybernetic array offering peak synchronization performance. Restructures synaptic pathways to squeeze unparalleled reflex responses out of highly trained operators.</span>
-                        <span data-lang="zh">针对精锐特工微调 of 骨灰级神经义体。全面重构突触传递路径，以激发无与伦比的极端神经反射响应速度。</span>
+                        <span data-lang="zh">针对精锐特工微调的骨灰级神经义体。全面重构突触传递路径，以激发无与伦比的极端神经反射响应速度。</span>
                     </p>
                 </div>
                 <div class="tech-card">
@@ -744,6 +777,12 @@
                     <span data-lang="zh">// 2077 传送门</span>
                 </a>
             </div>
+        </div>
+
+        <!-- Absolute Bottom Segment: Non-Intimidating Help Link Row -->
+        <div class="footer-help-row">
+            <span data-lang="en">For help <a href="https://kangtao.co/help" class="help-link">click here</a></span>
+            <span data-lang="zh">如需帮助 <a href="https://kangtao.co/help" class="help-link">点击此处</a></span>
         </div>
     </main>
 
