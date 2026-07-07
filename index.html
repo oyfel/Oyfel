@@ -495,7 +495,7 @@
     <header>
         <nav aria-label="Global Directory">
             <div class="nav-top-row">
-                <a class="nav-logo" href="/" onclick="switchTab('overview')" aria-label="Kang Tao Home">
+                <a class="nav-logo" href="/" onclick="return handleLogoClick(event)" aria-label="Kang Tao Home">
                     <div class="logo-text">
                         <span class="zh accent-white">康</span>
                         <span class="zh accent-orange">陶</span>
@@ -720,7 +720,7 @@
                         <span class="card-id">KT-NW03 // CYBER EYE</span>
                         <h3 class="card-title">
                             <span data-lang="en">Sub-Net Scanning Arrays</span>
-                            <span data-lang="zh">子网扫描扫描系统</span>
+                            <span data-lang="zh">子网扫描系统</span>
                         </h3>
                     </div>
                     <p class="card-desc">
@@ -806,21 +806,36 @@
     <script>
         let currentLang = 'en';
 
-        // Initialize Router state based strictly on simple / or /zh routing bounds
+        // Initialize Router state based on a ?lang= query param.
+        // NOTE: we deliberately avoid distinct paths like /zh here. This file is
+        // deployed as a single static page on GitHub Pages, which has no
+        // server-side rewrite rules -- a real /zh path would 404 on direct visit
+        // or refresh. A query string on the same "/" path never 404s.
         function resolveInitialRoute() {
-            const currentPath = window.location.pathname;
-            
-            if (currentPath === '/zh' || currentPath.startsWith('/zh')) {
+            const params = new URLSearchParams(window.location.search);
+            const requestedLang = params.get('lang');
+
+            if (requestedLang === 'zh') {
                 setLanguage('zh', false);
             } else {
                 setLanguage('en', false);
             }
         }
 
+        function handleLogoClick(event) {
+            event.preventDefault();
+            switchTab('overview');
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+            return false;
+        }
+
         function switchTab(tabName) {
             // Update UI Tab States within index
             document.querySelectorAll('.tab-panel').forEach(panel => panel.classList.remove('active'));
-            document.querySelectorAll('.nav-links button').forEach(btn => btn.classList.remove('active'));
+            document.querySelectorAll('.nav-links button').forEach(btn => {
+                btn.classList.remove('active');
+                btn.setAttribute('aria-selected', 'false');
+            });
             
             const targetPanel = document.getElementById('tab-' + tabName);
             const targetButton = document.getElementById('btn-' + tabName);
@@ -838,8 +853,11 @@
             currentLang = lang;
 
             if (updateHistory) {
-                const targetPath = lang === 'zh' ? '/zh' : '/';
-                window.history.pushState({ lang: lang }, '', targetPath);
+                const targetSearch = lang === 'zh' ? '?lang=zh' : window.location.pathname;
+                const targetUrl = lang === 'zh'
+                    ? window.location.pathname + '?lang=zh'
+                    : window.location.pathname;
+                window.history.pushState({ lang: lang }, '', targetUrl);
             }
 
             // Sync structural Body variables
