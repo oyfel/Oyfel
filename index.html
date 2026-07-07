@@ -220,8 +220,8 @@
             letter-spacing: 1.5px;
         }
 
-        .nav-links button {
-            background: none;
+        .nav-links a {
+            text-decoration: none;
             border: 1px solid transparent;
             color: var(--text-muted);
             cursor: pointer;
@@ -233,14 +233,15 @@
             font-weight: 600;
             padding: 0.5rem 1rem;
             border-radius: 4px;
+            display: inline-block;
         }
 
-        .nav-links button:hover {
+        .nav-links a:hover {
             color: #ffffff;
             background: rgba(255, 255, 255, 0.02);
         }
 
-        .nav-links button.active {
+        .nav-links a.active {
             color: var(--orange-primary);
             border-color: rgba(255, 85, 0, 0.2);
             background: rgba(255, 85, 0, 0.03);
@@ -493,7 +494,7 @@
             .nav-bottom-row { padding-bottom: 0.5rem; }
             
             .nav-links { gap: 0.2rem; flex-wrap: wrap; justify-content: center; width: 100%; }
-            .nav-links button { padding: 0.5rem 0.6rem; font-size: 0.7rem; }
+            .nav-links a { padding: 0.5rem 0.6rem; font-size: 0.7rem; }
             .system-grid { grid-template-columns: 1fr; gap: 1rem; }
             
             main { padding: 2rem 1rem; }
@@ -528,7 +529,7 @@
         <nav aria-label="Global Directory">
             <!-- Top Row Segment: Branding and Upper-Right Language Toggle Anchor -->
             <div class="nav-top-row">
-                <a class="nav-logo" href="https://kangtao.co" aria-label="Kang Tao Home">
+                <a class="nav-logo" href="/" onclick="handleRoutingLink(event, '/')" aria-label="Kang Tao Home">
                     <div class="logo-text">
                         <span class="zh accent-white">康</span>
                         <span class="zh accent-orange">陶</span>
@@ -538,44 +539,44 @@
                 </a>
                 
                 <div class="lang-switch" role="status" aria-live="polite">
-                    <button id="lang-en" class="lang-btn active" onclick="setLanguage('en')" aria-label="Switch interface to English Language">ENG</button>
+                    <button id="lang-en" class="lang-btn active" onclick="switchLanguageContext('en')" aria-label="Switch interface to English Language">ENG</button>
                     <span>|</span>
-                    <button id="lang-zh" class="lang-btn" onclick="setLanguage('zh')" aria-label="Switch interface to Chinese Language">中文</button>
+                    <button id="lang-zh" class="lang-btn" onclick="switchLanguageContext('zh')" aria-label="Switch interface to Chinese Language">中文</button>
                 </div>
             </div>
 
-            <!-- Bottom Row Segment: Navigation Tab Elements -->
+            <!-- Bottom Row Segment: Navigation Tab Elements as Semantic SEO Anchors -->
             <div class="nav-bottom-row">
                 <ul class="nav-links" role="tablist">
                     <li role="presentation">
-                        <button id="btn-overview" class="active" onclick="switchTab('overview')" role="tab" aria-selected="true" aria-controls="tab-overview">
+                        <a id="btn-overview" href="/" onclick="handleRoutingLink(event, '/')" class="active" role="tab" aria-selected="true" aria-controls="tab-overview">
                             <span data-lang="en">Overview</span>
                             <span data-lang="zh">企业概述</span>
-                        </button>
+                        </a>
                     </li>
                     <li role="presentation">
-                        <button id="btn-products" onclick="switchTab('products')" role="tab" aria-selected="false" aria-controls="tab-products">
+                        <a id="btn-products" href="/products" onclick="handleRoutingLink(event, '/products')" role="tab" aria-selected="false" aria-controls="tab-products">
                             <span data-lang="en">Products</span>
                             <span data-lang="zh">智能武器</span>
-                        </button>
+                        </a>
                     </li>
                     <li role="presentation">
-                        <button id="btn-defense" onclick="switchTab('defense')" role="tab" aria-selected="false" aria-controls="tab-defense">
+                        <a id="btn-defense" href="/defense" onclick="handleRoutingLink(event, '/defense')" role="tab" aria-selected="false" aria-controls="tab-defense">
                             <span data-lang="en">Defense</span>
                             <span data-lang="zh">国防架构</span>
-                        </button>
+                        </a>
                     </li>
                     <li role="presentation">
-                        <button id="btn-network" onclick="switchTab('network')" role="tab" aria-selected="false" aria-controls="tab-network">
+                        <a id="btn-network" href="/network" onclick="handleRoutingLink(event, '/network')" role="tab" aria-selected="false" aria-controls="tab-network">
                             <span data-lang="en">Network</span>
                             <span data-lang="zh">量子网络</span>
-                        </button>
+                        </a>
                     </li>
                     <li role="presentation">
-                        <button id="btn-qiant" onclick="switchTab('qiant')" role="tab" aria-selected="false" aria-controls="tab-qiant">
+                        <a id="btn-qiant" href="/qiant" onclick="handleRoutingLink(event, '/qiant')" role="tab" aria-selected="false" aria-controls="tab-qiant">
                             <span data-lang="en">QianT</span>
                             <span data-lang="zh">千太义体</span>
-                        </button>
+                        </a>
                     </li>
                 </ul>
             </div>
@@ -733,7 +734,7 @@
                     </div>
                     <p class="card-desc">
                         <span data-lang="en">Decentralized hyper-frequency transceiver relays preventing any data capture or packet decoding across interstellar deep-space frequencies.</span>
-                        <span data-lang="zh">去中心化的超高频收发中继站，从底层切断跨区域深空频段的一切数据流拦截或网络数据包解码。</span>
+                        <span data-lang="zh">去中心化的超高频收发中继站，从底层切断跨区域深空频段的一切数据流拦截 or 网络数据包解码。</span>
                     </p>
                 </article>
                 <article class="tech-card">
@@ -838,37 +839,184 @@
 
     <!-- Navigation Routing & Localization Engine -->
     <script>
-        function switchTab(tabName) {
-            document.querySelectorAll('.tab-panel').forEach(panel => panel.classList.remove('active'));
-            document.querySelectorAll('.nav-links button').forEach(btn => {
-                btn.classList.remove('active');
-                btn.setAttribute('aria-selected', 'false');
-            });
-            
-            const activePanel = document.getElementById('tab-' + tabName);
-            const activeButton = document.getElementById('btn-' + tabName);
-            
-            if (activePanel) activePanel.classList.add('active');
-            if (activeButton) {
-                activeButton.classList.add('active');
-                activeButton.setAttribute('aria-selected', 'true');
+        /* --- STREAMING_CHUNK: Setting up SEO Client-Side Route Map Arrays... */
+        const routeMap = {
+            'en': {
+                'overview': '/',
+                'products': '/products',
+                'defense': '/defense',
+                'network': '/network',
+                'qiant': '/qiant'
+            },
+            'zh': {
+                'overview': '/zh',
+                'products': '/products-zh',
+                'defense': '/defense-zh',
+                'network': '/network-zh',
+                'qiant': '/qiant-zh'
             }
+        };
+
+        let currentLang = 'en';
+        let currentTab = 'overview';
+
+        /* --- STREAMING_CHUNK: Processing deep link resolution logic on initialization... */
+        function resolveInitialRoute() {
+            const currentPath = window.location.pathname;
             
-            window.scrollTo({ top: 0, behavior: 'smooth' });
+            // Auto Route English defaults or Root requests
+            if (currentPath === '/' || currentPath === '') {
+                syncRouterState('en', 'overview', false);
+                return;
+            }
+            if (currentPath === '/zh') {
+                syncRouterState('zh', 'overview', false);
+                return;
+            }
+
+            // Match dynamic paths
+            let detectedLang = 'en';
+            let detectedTab = 'overview';
+
+            // Check if path is Chinese
+            if (currentPath.endsWith('-zh') || currentPath === '/zh') {
+                detectedLang = 'zh';
+            }
+
+            // Extract the active tab component
+            const normalizedPath = currentPath.replace('-zh', '');
+            if (normalizedPath.includes('/products')) detectedTab = 'products';
+            else if (normalizedPath.includes('/defense')) detectedTab = 'defense';
+            else if (normalizedPath.includes('/network')) detectedTab = 'network';
+            else if (normalizedPath.includes('/qiant')) detectedTab = 'qiant';
+
+            syncRouterState(detectedLang, detectedTab, false);
         }
 
-        function setLanguage(lang) {
-            document.querySelectorAll('.lang-btn').forEach(btn => btn.classList.remove('active'));
-            document.getElementById('lang-' + lang).classList.add('active');
+        /* --- STREAMING_CHUNK: Handling active navigation clicks... */
+        function handleRoutingLink(event, path) {
+            event.preventDefault();
+            
+            // Detect target language context from destination path
+            let targetLang = currentLang;
+            if (path.endsWith('-zh') || path === '/zh') {
+                targetLang = 'zh';
+            } else if (path === '/' || !path.includes('-zh')) {
+                // If it doesn't end with -zh, but we clicked overview via '/' and are currently on ZH, preserve ZH
+                if (path === '/' && currentLang === 'zh') {
+                    path = '/zh';
+                    targetLang = 'zh';
+                } else {
+                    targetLang = 'en';
+                }
+            }
 
+            // Resolve target tab component
+            let targetTab = 'overview';
+            const normalizedPath = path.replace('-zh', '');
+            if (normalizedPath.includes('/products')) targetTab = 'products';
+            else if (normalizedPath.includes('/defense')) targetTab = 'defense';
+            else if (normalizedPath.includes('/network')) targetTab = 'network';
+            else if (normalizedPath.includes('/qiant')) targetTab = 'qiant';
+
+            syncRouterState(targetLang, targetTab, true);
+        }
+
+        /* --- STREAMING_CHUNK: Toggling manual language switch context... */
+        function switchLanguageContext(lang) {
+            if (lang === currentLang) return;
+            
+            // Map current tab onto the matching language route
+            const targetPath = routeMap[lang][currentTab];
+            syncRouterState(lang, currentTab, true);
+        }
+
+        /* --- STREAMING_CHUNK: Syncing state across variables, elements, and paths... */
+        function syncRouterState(lang, tab, updateHistoryHistory = true) {
+            currentLang = lang;
+            currentTab = tab;
+
+            const targetURL = routeMap[lang][tab];
+
+            // 1. Push history states to window if enabled
+            if (updateHistoryHistory) {
+                window.history.pushState({ lang: lang, tab: tab }, '', targetURL);
+            }
+
+            // 2. Adjust core Body language classes
             if (lang === 'zh') {
                 document.body.classList.remove('lang-en');
                 document.body.classList.add('lang-zh');
+                document.getElementById('lang-zh').classList.add('active');
+                document.getElementById('lang-en').classList.remove('active');
             } else {
                 document.body.classList.remove('lang-zh');
                 document.body.classList.add('lang-en');
+                document.getElementById('lang-en').classList.add('active');
+                document.getElementById('lang-zh').classList.remove('active');
             }
+
+            // 3. Update tabs DOM active markers
+            document.querySelectorAll('.tab-panel').forEach(panel => panel.classList.remove('active'));
+            document.querySelectorAll('.nav-links a').forEach(btn => {
+                btn.classList.remove('active');
+                btn.setAttribute('aria-selected', 'false');
+            });
+
+            const targetPanel = document.getElementById('tab-' + tab);
+            const targetButton = document.getElementById('btn-' + tab);
+
+            if (targetPanel) targetPanel.classList.add('active');
+            if (targetButton) {
+                targetButton.classList.add('active');
+                targetButton.setAttribute('aria-selected', 'true');
+            }
+
+            // 4. Dyn-update all sub-navigation SEO anchors to correspond with the new active language
+            const tabs = ['overview', 'products', 'defense', 'network', 'qiant'];
+            tabs.forEach(item => {
+                const lnk = document.getElementById('btn-' + item);
+                if (lnk) {
+                    lnk.setAttribute('href', routeMap[lang][item]);
+                }
+            });
+
+            // 5. Dyn-update External shop context paths
+            const topBannerLink = document.querySelector('.top-shop-banner a');
+            if (topBannerLink) {
+                topBannerLink.setAttribute('href', lang === 'zh' ? 'https://shop.kangtao.co/zh' : 'https://shop.kangtao.co');
+            }
+
+            // 6. Dyn-update Portal subdomains context paths
+            const footerPortalLink = document.querySelector('.portal-link a');
+            if (footerPortalLink) {
+                footerPortalLink.setAttribute('href', lang === 'zh' ? 'https://2077.kangtao.co/zh' : 'https://2077.kangtao.co');
+            }
+
+            // 7. Dyn-update Help assistance desk context paths
+            const footerHelpLink = document.querySelector('.help-link');
+            if (footerHelpLink) {
+                footerHelpLink.setAttribute('href', lang === 'zh' ? 'https://kangtao.co/help-zh' : 'https://kangtao.co/help');
+            }
+
+            // Adjust standard scroll behaviors cleanly
+            window.scrollTo({ top: 0, behavior: 'smooth' });
         }
+
+        /* --- STREAMING_CHUNK: Listening to client history back/forward navigation... */
+        window.addEventListener('popstate', (event) => {
+            if (event.state && event.state.lang && event.state.tab) {
+                syncRouterState(event.state.lang, event.state.tab, false);
+            } else {
+                resolveInitialRoute();
+            }
+        });
+
+        // Initialize App routing context on load window event
+        window.onload = function() {
+            resolveInitialRoute();
+        };
     </script>
 </body>
 </html>
+```eof
