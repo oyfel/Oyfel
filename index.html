@@ -5,14 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <!-- PRIMARY SEARCH ENGINE METADATA -->
-    <title>康陶 KANG TAO // Advanced Intelligent Electronic Solutions</title>
+    <title>KANG TAO // Advanced Intelligent Electronic Solutions</title>
     <meta name="description" content="Official database for Kang Tao. Manufacturers of smart ammunition, autonomous defense assets, quantum encryption networks, and QianT implants.">
-    <meta name="keywords" content="Kang Tao, 康陶, Smart Weapons, Cyberware, QianT, Sandevistan, Neural Upgrades, Cyberpunk Defense">
+    <meta name="keywords" content="Kang Tao, Smart Weapons, Cyberware, QianT, Sandevistan, Neural Upgrades, Cyberpunk Defense">
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://kangtao.co">
 
     <!-- OPEN GRAPH PREVIEW METADATA -->
-    <meta property="og:title" content="康陶 KANG TAO // Advanced Intelligent Electronic Solutions">
+    <meta property="og:title" content="KANG TAO // Advanced Intelligent Electronic Solutions">
     <meta property="og:description" content="Discover advanced tactical smart firearms, security grids, and cybernetic nervous enhancements designed by Kang Tao.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://kangtao.co">
@@ -20,7 +20,7 @@
 
     <!-- TWITTER CARDS PREVIEW METADATA -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="康陶 KANG TAO // Tactical Solutions">
+    <meta name="twitter:title" content="KANG TAO // Tactical Solutions">
     <meta name="twitter:description" content="Deploy elite smart-targeting weapons platforms and military-grade network security schemas.">
     <meta name="twitter:image" content="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='%23060606'/%3E%3Cpolygon points='15,20 92,20 85,80 8,80' fill='%23ff5500'/%3E%3Ctext x='47%25' y='55%25' font-family='Noto Sans SC, sans-serif' font-weight='900' font-size='42' fill='%23060606' text-anchor='middle' dominant-baseline='central'%3E康陶%3C/text%3E%3C/svg%3E">
 
@@ -29,8 +29,9 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Noto+Sans+SC:wght@400;500;700;900&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Noto+Sans+SC:wght@900&family=Share+Tech+Mono&display=swap" rel="stylesheet">
     
+    <!-- STREAMING_CHUNK: Configuring style variables and basic rules... -->
     <style>
         :root {
             --bg-color: #060606;
@@ -57,7 +58,7 @@
         body {
             background-color: var(--bg-color);
             color: var(--text-main);
-            font-family: 'Plus Jakarta Sans', 'Noto Sans SC', sans-serif;
+            font-family: 'Plus Jakarta Sans', sans-serif;
             min-height: 100vh;
             overflow-x: hidden;
             position: relative;
@@ -88,7 +89,7 @@
         }
 
         .top-shop-banner a {
-            font-family: 'Plus Jakarta Sans', 'Noto Sans SC', sans-serif;
+            font-family: 'Plus Jakarta Sans', sans-serif;
             font-size: 0.72rem;
             font-weight: 600;
             color: var(--text-muted);
@@ -109,6 +110,7 @@
             color: #ffffff;
         }
 
+        /* --- STREAMING_CHUNK: Styling layout header and logo components... --> */
         /* --- GLOBAL NAVIGATION STRUCT --- */
         nav {
             width: 100%;
@@ -125,7 +127,7 @@
 
         .nav-top-row {
             display: flex;
-            justify-content: space-between;
+            justify-content: center;
             align-items: center;
             padding: 1.2rem 0 1rem 0;
             width: 100%;
@@ -138,45 +140,14 @@
             cursor: pointer;
         }
 
-        .logo-text {
-            display: flex;
-            align-items: flex-end;
-            line-height: 0.95;
+        /* Rendered as an image element directly containing vector-rendered corporate identity */
+        .logo-img {
+            height: 38px;
+            width: auto;
+            display: block;
         }
 
-        .logo-text .zh { font-family: 'Noto Sans SC'; font-size: 1.8rem; font-weight: 900; letter-spacing: -1px; }
-        .logo-text .en { font-family: 'Orbitron'; font-size: 1.3rem; font-weight: 900; margin-left: 8px; padding-bottom: 1px; letter-spacing: 0px; }
-
-        .lang-switch {
-            font-family: 'Plus Jakarta Sans', sans-serif;
-            font-size: 0.75rem;
-            letter-spacing: 1px;
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-            color: var(--text-muted);
-            flex-shrink: 0;
-        }
-
-        .lang-btn {
-            background: none;
-            border: none;
-            color: var(--text-muted);
-            cursor: pointer;
-            font-weight: 700;
-            transition: color 0.3s;
-            padding: 0.2rem 0.4rem;
-        }
-
-        .lang-btn.active {
-            color: var(--orange-primary);
-            text-shadow: 0 0 10px var(--orange-glow);
-        }
-
-        .lang-btn:hover:not(.active) {
-            color: #ffffff;
-        }
-
+        /* --- STREAMING_CHUNK: Styling corporate tabs and hover state vectors... --> */
         .nav-bottom-row {
             display: flex;
             justify-content: center;
@@ -189,7 +160,7 @@
             display: flex;
             gap: 0.5rem;
             list-style: none;
-            font-family: 'Plus Jakarta Sans', 'Noto Sans SC', sans-serif;
+            font-family: 'Plus Jakarta Sans', sans-serif;
             font-size: 0.75rem;
             letter-spacing: 1.5px;
         }
@@ -220,9 +191,6 @@
             background: rgba(255, 85, 0, 0.03);
             font-weight: 700;
         }
-
-        .accent-white { color: #ffffff; }
-        .accent-orange { color: var(--orange-primary); text-shadow: 0 0 15px var(--orange-glow); }
 
         /* --- LAYOUT WRAPPER --- */
         main {
@@ -278,19 +246,15 @@
             margin-bottom: 4rem;
         }
 
-        .brand-horizontal-row {
-            display: flex;
-            align-items: flex-end;
-            line-height: 0.95;
-            margin-bottom: 1.5rem;
+        .hero-logo-img {
+            height: 62px;
+            width: auto;
+            margin-bottom: 2rem;
         }
-
-        .zh-text { font-family: 'Noto Sans SC'; font-size: 4.5rem; font-weight: 900; letter-spacing: -3px; }
-        .en-text { font-family: 'Orbitron'; font-size: 3.2rem; font-weight: 900; letter-spacing: 0px; margin-left: 14px; padding-bottom: 4px; }
 
         .slogan-container { display: flex; align-items: center; width: 100%; max-width: 540px; gap: 16px; }
         .orange-line { flex-grow: 1; height: 1px; background-color: var(--orange-primary); box-shadow: 0 0 6px var(--orange-glow); }
-        .slogan-sub { font-family: 'Noto Sans SC'; font-size: 0.95rem; font-weight: 700; color: var(--orange-primary); letter-spacing: 6px; text-indent: 6px; white-space: nowrap; }
+        .slogan-sub { font-family: 'Plus Jakarta Sans', sans-serif; font-size: 0.85rem; font-weight: 700; color: var(--orange-primary); letter-spacing: 4px; text-indent: 4px; white-space: nowrap; text-transform: uppercase; }
 
         .status-block {
             display: flex;
@@ -319,11 +283,12 @@
             66% { box-shadow: -2px 2px 10px rgba(0,102,255,0.5), 2px -2px 10px rgba(0,255,0,0.5); }
         }
 
-        .timeline-text { color: var(--orange-primary); font-family: 'Plus Jakarta Sans', 'Noto Sans SC', sans-serif; font-size: 0.95rem; font-weight: 600; letter-spacing: 2px; }
+        .timeline-text { color: var(--orange-primary); font-family: 'Plus Jakarta Sans', sans-serif; font-size: 0.95rem; font-weight: 600; letter-spacing: 2px; }
 
+        /* --- STREAMING_CHUNK: Creating layout grids and tech card components... --> */
         /* --- MODERN GRID MODULE MATRIX --- */
         .section-title {
-            font-family: 'Plus Jakarta Sans', 'Noto Sans SC', sans-serif;
+            font-family: 'Plus Jakarta Sans', sans-serif;
             font-weight: 700;
             font-size: 1.3rem;
             letter-spacing: 2px;
@@ -378,8 +343,8 @@
 
         .card-meta { display: flex; flex-direction: column; gap: 0.4rem; margin-bottom: 1.5rem; }
         .card-id { font-family: 'Share Tech Mono'; color: var(--orange-primary); font-size: 0.8rem; letter-spacing: 1px; }
-        .card-title { font-family: 'Plus Jakarta Sans', 'Noto Sans SC', sans-serif; font-size: 1.25rem; font-weight: 700; color: #ffffff; }
-        .card-desc { color: var(--text-muted); font-family: 'Plus Jakarta Sans', 'Noto Sans SC', sans-serif; font-size: 0.88rem; line-height: 1.6; font-weight: 400; }
+        .card-title { font-family: 'Plus Jakarta Sans', sans-serif; font-size: 1.25rem; font-weight: 700; color: #ffffff; }
+        .card-desc { color: var(--text-muted); font-family: 'Plus Jakarta Sans', sans-serif; font-size: 0.88rem; line-height: 1.6; font-weight: 400; }
 
         /* --- GEOMETRIC FOOTER FRAMEWORK --- */
         .footer-row {
@@ -394,7 +359,7 @@
         }
 
         .tagline { 
-            font-family: 'Plus Jakarta Sans', 'Noto Sans SC', sans-serif; 
+            font-family: 'Plus Jakarta Sans', sans-serif; 
             font-size: 0.8rem; 
             font-weight: 600; 
             color: rgba(255, 255, 255, 0.2); 
@@ -404,7 +369,7 @@
         }
 
         .portal-link a {
-            font-family: 'Plus Jakarta Sans', 'Noto Sans SC', sans-serif;
+            font-family: 'Plus Jakarta Sans', sans-serif;
             font-size: 0.8rem;
             font-weight: 600;
             color: rgba(255, 255, 255, 0.25);
@@ -444,20 +409,13 @@
             text-shadow: 0 0 8px var(--orange-glow);
         }
 
-        /* --- MULTILANG ENGINE FOR INDEPENDENT TABS --- */
-        body.lang-en [data-lang="zh"] { display: none !important; }
-        body.lang-en [data-lang="en"] { display: inline-block !important; }
-        
-        body.lang-zh [data-lang="en"] { display: none !important; }
-        body.lang-zh [data-lang="zh"] { display: inline-block !important; }
-
         @media (max-width: 1024px) {
             .system-grid { grid-template-columns: repeat(2, 1fr); gap: 1.2rem; }
         }
 
         @media (max-width: 768px) {
             nav { padding: 1rem; }
-            .nav-top-row { flex-direction: row; justify-content: space-between; padding: 0.5rem 0 1rem 0; }
+            .nav-top-row { flex-direction: row; justify-content: center; padding: 0.5rem 0 1rem 0; }
             .nav-bottom-row { padding-bottom: 0.5rem; }
             
             .nav-links { gap: 0.2rem; flex-wrap: wrap; justify-content: center; width: 100%; }
@@ -466,8 +424,7 @@
             
             main { padding: 2rem 1rem; }
             .container { padding: 4rem 1.5rem 3rem 1.5rem; }
-            .zh-text { font-size: 3rem; letter-spacing: -1px; }
-            .en-text { font-size: 2.2rem; letter-spacing: 0px; margin-left: 10px; padding-bottom: 2px; }
+            .hero-logo-img { height: 44px; margin-bottom: 1.5rem; }
             .slogan-sub { font-size: 0.8rem; letter-spacing: 4px; }
             .slogan-container { gap: 10px; }
             
@@ -481,13 +438,12 @@
         }
     </style>
 </head>
-<body class="lang-en">
+<body>
 
     <!-- Absolute Highest Priority Announcement Banner -->
     <div class="top-shop-banner">
         <a id="header-shop-banner" href="https://shop.kangtao.co">
-            <span data-lang="en">for the kangtao shop <span class="highlight">click here</span></span>
-            <span data-lang="zh">前往康陶官方商城 <span class="highlight">点击此处</span></span>
+            FOR THE KANGTAO SHOP <span class="highlight">CLICK HERE</span>
         </a>
     </div>
 
@@ -495,52 +451,37 @@
     <header>
         <nav aria-label="Global Directory">
             <div class="nav-top-row">
-                <a class="nav-logo" href="/" onclick="return handleLogoClick(event)" aria-label="Kang Tao Home">
-                    <div class="logo-text">
-                        <span class="zh accent-white">康</span>
-                        <span class="zh accent-orange">陶</span>
-                        <span class="en accent-white">KANG</span>
-                        <span class="en accent-orange">TAO</span>
-                    </div>
+                <a class="nav-logo" href="/" onclick="switchTab('overview')" aria-label="Kang Tao Home">
+                    <!-- Stylized SVG logo outputting vector Chinese characters with English typography in one image file context -->
+                    <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 310 60'%3E%3Crect width='310' height='60' fill='none'/%3E%3Cpolygon points='10,10 110,10 95,50 10,50' fill='%23ff5500'/%3E%3Ctext x='53' y='33' font-family='Noto Sans SC, sans-serif' font-weight='900' font-size='24' fill='%23060606' text-anchor='middle' dominant-baseline='central'%3E康陶%3C/text%3E%3Ctext x='130' y='34' font-family='Orbitron, sans-serif' font-weight='900' font-size='26' fill='%23ffffff' dominant-baseline='central'%3EKANG%3C/text%3E%3Ctext x='212' y='34' font-family='Orbitron, sans-serif' font-weight='900' font-size='26' fill='%23ff5500' dominant-baseline='central'%3ETAO%3C/text%3E%3C/svg%3E" alt="Kang Tao Logo Image" class="logo-img">
                 </a>
-                
-                <div class="lang-switch" role="status" aria-live="polite">
-                    <button id="lang-en" class="lang-btn active" onclick="setLanguage('en')" aria-label="Switch interface to English Language">ENG</button>
-                    <span>|</span>
-                    <button id="lang-zh" class="lang-btn" onclick="setLanguage('zh')" aria-label="Switch interface to Chinese Language">中文</button>
-                </div>
             </div>
 
             <div class="nav-bottom-row">
                 <ul class="nav-links" role="tablist">
                     <li role="presentation">
                         <button id="btn-overview" class="active" onclick="switchTab('overview')" role="tab" aria-selected="true" aria-controls="tab-overview">
-                            <span data-lang="en">Overview</span>
-                            <span data-lang="zh">企业概述</span>
+                            Overview
                         </button>
                     </li>
                     <li role="presentation">
                         <button id="btn-products" onclick="switchTab('products')" role="tab" aria-selected="false" aria-controls="tab-products">
-                            <span data-lang="en">Products</span>
-                            <span data-lang="zh">智能武器</span>
+                            Products
                         </button>
                     </li>
                     <li role="presentation">
                         <button id="btn-defense" onclick="switchTab('defense')" role="tab" aria-selected="false" aria-controls="tab-defense">
-                            <span data-lang="en">Defense</span>
-                            <span data-lang="zh">国防架构</span>
+                            Defense
                         </button>
                     </li>
                     <li role="presentation">
                         <button id="btn-network" onclick="switchTab('network')" role="tab" aria-selected="false" aria-controls="tab-network">
-                            <span data-lang="en">Network</span>
-                            <span data-lang="zh">量子网络</span>
+                            Network
                         </button>
                     </li>
                     <li role="presentation">
                         <button id="btn-qiant" onclick="switchTab('qiant')" role="tab" aria-selected="false" aria-controls="tab-qiant">
-                            <span data-lang="en">QianT</span>
-                            <span data-lang="zh">千太义体</span>
+                            QianT
                         </button>
                     </li>
                 </ul>
@@ -555,29 +496,21 @@
             <div class="hero-section">
                 <div class="container">
                     <div class="brand-header-block">
-                        <div class="brand-horizontal-row">
-                            <span class="zh-text accent-white">康</span>
-                            <span class="zh-text accent-orange">陶</span>
-                            <span class="en-text accent-white">KANG</span>
-                            <span class="en-text accent-orange">TAO</span>
-                        </div>
+                        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 310 60'%3E%3Crect width='310' height='60' fill='none'/%3E%3Cpolygon points='10,10 110,10 95,50 10,50' fill='%23ff5500'/%3E%3Ctext x='53' y='33' font-family='Noto Sans SC, sans-serif' font-weight='900' font-size='24' fill='%23060606' text-anchor='middle' dominant-baseline='central'%3E康陶%3C/text%3E%3Ctext x='130' y='34' font-family='Orbitron, sans-serif' font-weight='900' font-size='26' fill='%23ffffff' dominant-baseline='central'%3EKANG%3C/text%3E%3Ctext x='212' y='34' font-family='Orbitron, sans-serif' font-weight='900' font-size='26' fill='%23ff5500' dominant-baseline='central'%3ETAO%3C/text%3E%3C/svg%3E" alt="Kang Tao Logo Emblem" class="hero-logo-img">
                         <div class="slogan-container">
                             <div class="orange-line" aria-hidden="true"></div>
                             <div class="slogan-sub">
-                                <span data-lang="en">高级智能电子解决方案</span>
-                                <span data-lang="zh">高级智能电子解决方案</span>
+                                Advanced Intelligent Electronic Solutions
                             </div>
                             <div class="orange-line" aria-hidden="true"></div>
                         </div>
                     </div>
                     <div class="status-block">
                         <div class="badge-deployment">
-                            <span data-lang="en">Early Development</span>
-                            <span data-lang="zh">初步开发阶段</span>
+                            Early Development
                         </div>
                         <div class="timeline-text">
-                            <span data-lang="en">FULL WEBSITE DEPLOYMENT COMING SOON // Q3 2026</span>
-                            <span data-lang="zh">全功能数据站点即将上线 // 2026年第三季度</span>
+                            FULL WEBSITE DEPLOYMENT COMING SOON // Q3 2026
                         </div>
                     </div>
                 </div>
@@ -587,47 +520,40 @@
         <!-- MODULE PORTAL 02: PRODUCTS -->
         <section id="tab-products" class="tab-panel" role="tabpanel" aria-labelledby="btn-products">
             <h2 class="section-title">
-                <span data-lang="en">Smart Weapon Armaments <span>KT-ARMORY // FIREARMS_DIVISION</span></span>
-                <span data-lang="zh">智能武器军备库 <span>KT-兵工厂 // 火器事业部</span></span>
+                Smart Weapon Armaments <span>KT-ARMORY // FIREARMS_DIVISION</span>
             </h2>
             <div class="system-grid">
                 <article class="tech-card">
                     <div class="card-meta">
                         <span class="card-id">KT-A22 // SMART PISTOL</span>
                         <h3 class="card-title">
-                            <span data-lang="en">A-22B Chao</span>
-                            <span data-lang="zh">A-22B 鼌</span>
+                            A-22B Chao
                         </h3>
                     </div>
                     <p class="card-desc">
-                        <span data-lang="en">The corporate standard smart handgun. Fires micro-missiles utilizing a multi-barrel configuration to instantly lock and track multiple evasive threats simultaneously.</span>
-                        <span data-lang="zh">企业标准智能手枪。采用多枪管配置发射微型跟踪弹，能瞬时自动锁定并追踪多个进行高速规避的威胁目标。</span>
+                        The corporate standard smart handgun. Fires micro-missiles utilizing a multi-barrel configuration to instantly lock and track multiple evasive threats simultaneously.
                     </p>
                 </article>
                 <article class="tech-card">
                     <div class="card-meta">
                         <span class="card-id">KT-G58 // SMART SUBMACHINE GUN</span>
                         <h3 class="card-title">
-                            <span data-lang="en">G-58 Dian</span>
-                            <span data-lang="zh">G-58 典</span>
+                            G-58 Dian
                         </h3>
                     </div>
                     <p class="card-desc">
-                        <span data-lang="en">An ultra-high fire rate defense asset. Operates a smart macro-targeting matrix that delivers surgical accuracy over close-quarters skirmishes without manual correction.</span>
-                        <span data-lang="zh">高射速近战防卫利器。内置智能宏观瞄准矩阵，在近距离突击遭遇战中无需手动瞄准即可提供精准的外科手术式打击。</span>
+                        An ultra-high fire rate defense asset. Operates a smart macro-targeting matrix that delivers surgical accuracy over close-quarters skirmishes without manual correction.
                     </p>
                 </article>
                 <article class="tech-card">
                     <div class="card-meta">
                         <span class="card-id">KT-L69 // SMART SHOTGUN</span>
                         <h3 class="card-title">
-                            <span data-lang="en">L-69 Zhuo</span>
-                            <span data-lang="zh">L-69 卓</span>
+                            L-69 Zhuo
                         </h3>
                     </div>
                     <p class="card-desc">
-                        <span data-lang="en">A heavy-ordnance tactical variant. Fires micro-guided pellet cluster bursts that pattern precisely over a targeted neural grid array for maximum termination efficiency.</span>
-                        <span data-lang="zh">重型战术火力改型。发射微型智能制导散射弹丸，能够精确覆盖目标区域内的神经网，实现最高的歼灭效率。</span>
+                        A heavy-ordnance tactical variant. Fires micro-guided pellet cluster bursts that pattern precisely over a targeted neural grid array for maximum termination efficiency.
                     </p>
                 </article>
             </div>
@@ -636,47 +562,40 @@
         <!-- MODULE PORTAL 03: DEFENSE APPARATUS -->
         <section id="tab-defense" class="tab-panel" role="tabpanel" aria-labelledby="btn-defense">
             <h2 class="section-title">
-                <span data-lang="en">Corporate Defense Infrastructures <span>KT-DEF // SECURE_SHIELD</span></span>
-                <span data-lang="zh">企业安全防务架构 <span>KT-防御安全 // 安全防护罩</span></span>
+                Corporate Defense Infrastructures <span>KT-DEF // SECURE_SHIELD</span>
             </h2>
             <div class="system-grid">
                 <article class="tech-card">
                     <div class="card-meta">
                         <span class="card-id">KT-DF01 // NEURAL BARRIER</span>
                         <h3 class="card-title">
-                            <span data-lang="en">Aegis Grid Overhaul</span>
-                            <span data-lang="zh">宙斯盾网格升级系统</span>
+                            Aegis Grid Overhaul
                         </h3>
                     </div>
                     <p class="card-desc">
-                        <span data-lang="en">Hardware-based sub-dermal shield buffers that counter external tracking and jam rogue electronic interception vectors completely.</span>
-                        <span data-lang="zh">基于硬件的皮下防御缓冲系统，可全面拦截外部追踪并彻底干扰恶意的电子截获矢量。</span>
+                        Hardware-based sub-dermal shield buffers that counter external tracking and jam rogue electronic interception vectors completely.
                     </p>
                 </article>
                 <article class="tech-card">
                     <div class="card-meta">
                         <span class="card-id">KT-DF02 // HARDWARE MASKING</span>
                         <h3 class="card-title">
-                            <span data-lang="en">ICE-Wall Fortification</span>
-                            <span data-lang="zh">ICE防火墙全面加固</span>
+                            ICE-Wall Fortification
                         </h3>
                     </div>
                     <p class="card-desc">
-                        <span data-lang="en">Military-grade cryptographic firmware protections guarding corporate cybernetic links against invasive neural architecture breaches.</span>
-                        <span data-lang="zh">军工级加密固件保护层，悍卫企业内部网络连接不受侵入式神经架构破译与黑客漏洞的威胁。</span>
+                        Military-grade cryptographic firmware protections guarding corporate cybernetic links against invasive neural architecture breaches.
                     </p>
                 </article>
                 <article class="tech-card">
                     <div class="card-meta">
                         <span class="card-id">KT-DF03 // PERSONNEL EXTRACTION</span>
                         <h3 class="card-title">
-                            <span data-lang="en">Autonomous Extraction Drone</span>
-                            <span data-lang="zh">自主式撤离无人机</span>
+                            Autonomous Extraction Drone
                         </h3>
                     </div>
                     <p class="card-desc">
-                        <span data-lang="en">Automated airborne assets linked directly into VIP vitals tracking matrices, ready to deploy immediate suppressive covering layouts during perimeter stress events.</span>
-                        <span data-lang="zh">自动化空中安防设备，直接接入高管生命特征追踪矩阵。在遭遇突发危机时，能够瞬间部署压制性火力掩护。</span>
+                        Automated airborne assets linked directly into VIP vitals tracking matrices, ready to deploy immediate suppressive covering layouts during perimeter stress events.
                     </p>
                 </article>
             </div>
@@ -685,47 +604,40 @@
         <!-- MODULE PORTAL 04: GLOBAL NETWORK ARRAYS -->
         <section id="tab-network" class="tab-panel" role="tabpanel" aria-labelledby="btn-network">
             <h2 class="section-title">
-                <span data-lang="en">Global Quantum Network Array <span>KT-NET // DATA_MATRIX</span></span>
-                <span data-lang="zh">全球量子网络阵列 <span>KT-网络 // 数据矩阵</span></span>
+                Global Quantum Network Array <span>KT-NET // DATA_MATRIX</span>
             </h2>
             <div class="system-grid">
                 <article class="tech-card">
                     <div class="card-meta">
                         <span class="card-id">KT-NW01 // SECURE RELAY</span>
                         <h3 class="card-title">
-                            <span data-lang="en">Quantum Encryption Nodes</span>
-                            <span data-lang="zh">量子加密节点</span>
+                            Quantum Encryption Nodes
                         </h3>
                     </div>
                     <p class="card-desc">
-                        <span data-lang="en">Decentralized hyper-frequency transceiver relays preventing any data capture or packet decoding across interstellar deep-space frequencies.</span>
-                        <span data-lang="zh">去中心化的超高频收发中继站，从底层切断跨区域深空频段的一切数据流拦截或网络数据包解码。</span>
+                        Decentralized hyper-frequency transceiver relays preventing any data capture or packet decoding across interstellar deep-space frequencies.
                     </p>
                 </article>
                 <article class="tech-card">
                     <div class="card-meta">
                         <span class="card-id">KT-NW02 // LINK MONITOR</span>
                         <h3 class="card-title">
-                            <span data-lang="en">Sub-Orbital Data Uplink</span>
-                            <span data-lang="zh">次轨道数据上行链路</span>
+                            Sub-Orbital Data Uplink
                         </h3>
                     </div>
                     <p class="card-desc">
-                        <span data-lang="en">Constellation satellite systems that route strategic assets across redundant processing facilities for uninterrupted operational communication.</span>
-                        <span data-lang="zh">密集型近地轨道卫星群系统，通过多重冗余处理中心智能分配核心资产，确保战术操作通信不间断。</span>
+                        Constellation satellite systems that route strategic assets across redundant processing facilities for uninterrupted operational communication.
                     </p>
                 </article>
                 <article class="tech-card">
                     <div class="card-meta">
                         <span class="card-id">KT-NW03 // CYBER EYE</span>
                         <h3 class="card-title">
-                            <span data-lang="en">Sub-Net Scanning Arrays</span>
-                            <span data-lang="zh">子网扫描系统</span>
+                            Sub-Net Scanning Arrays
                         </h3>
                     </div>
                     <p class="card-desc">
-                        <span data-lang="en">Real-time proactive intrusion counter-measurement systems mapping unauthorized subnet connections within regional infrastructure bounds.</span>
-                        <span data-lang="zh">实时主动式网络侵入反制系统，全面主动测绘并清洗区域基础设施边界内的任何未授权子网连接。</span>
+                        Real-time proactive intrusion counter-measurement systems mapping unauthorized subnet connections within regional infrastructure bounds.
                     </p>
                 </article>
             </div>
@@ -734,47 +646,40 @@
         <!-- MODULE PORTAL 05: QIANT CYBERWARE SUBSIDIARY -->
         <section id="tab-qiant" class="tab-panel" role="tabpanel" aria-labelledby="btn-qiant">
             <h2 class="section-title">
-                <span data-lang="en">QianT Cyberware Subsidiary <span>QIANT-BIO // NEURAL_UPGRADES</span></span>
-                <span data-lang="zh">千太义体全资子公司 <span>千太生物 // 神经升级组件</span></span>
+                QianT Cyberware Subsidiary <span>QIANT-BIO // NEURAL_UPGRADES</span>
             </h2>
             <div class="system-grid">
                 <article class="tech-card">
                     <div class="card-meta">
                         <span class="card-id">QT-MK4 // NERVOUS SYSTEM</span>
                         <h3 class="card-title">
-                            <span data-lang="en">QianT Sandevistan Mk.4</span>
-                            <span data-lang="zh">千太 斯安威斯坦 4型</span>
+                            QianT Sandevistan Mk.4
                         </h3>
                     </div>
                     <p class="card-desc">
-                        <span data-lang="en">The premiere military-grade neural processor expansion. Drastically optimizes temporal dilation, slowing down baseline perception to execute clean combat adjustments under pressure.</span>
-                        <span data-lang="zh">顶级军用级神经处理器扩展组件。大幅优化时间膨胀效率，放慢神经感知基准，以便在极端高压下进行精准完美的战术机动。</span>
+                        The premiere military-grade neural processor expansion. Drastically optimizes temporal dilation, slowing down baseline perception to execute clean combat adjustments under pressure.
                     </p>
                 </article>
                 <article class="tech-card">
                     <div class="card-meta">
                         <span class="card-id">QT-MK5 // REFLEX UPGRADE</span>
                         <h3 class="card-title">
-                            <span data-lang="en">QianT "Warp Dancer" Sandevistan Mk.5</span>
-                            <span data-lang="zh">千太 “扭曲舞者” 斯安威斯坦 5型</span>
+                            QianT "Warp Dancer" Sandevistan Mk.5
                         </h3>
                     </div>
                     <p class="card-desc">
-                        <span data-lang="en">An elite hyper-tuned cybernetic array offering peak synchronization performance. Restructures synaptic pathways to squeeze unparalleled reflex responses out of highly trained operators.</span>
-                        <span data-lang="zh">针对精锐特工微调的骨灰级神经义体。全面重构突触传递路径，以激发无与伦比的极端神经反射响应速度。</span>
+                        An elite hyper-tuned cybernetic array offering peak synchronization performance. Restructures synaptic pathways to squeeze unparalleled reflex responses out of highly trained operators.
                     </p>
                 </article>
                 <article class="tech-card">
                     <div class="card-meta">
                         <span class="card-id">QT-CO03 // BIO-MONITOR</span>
                         <h3 class="card-title">
-                            <span data-lang="en">Co-Processor Cores</span>
-                            <span data-lang="zh">联控协处理器核心</span>
+                            Co-Processor Cores
                         </h3>
                     </div>
                     <p class="card-desc">
-                        <span data-lang="en">Direct interface nodes engineered to bridge smart targeted ammunition systems cleanly with sub-dermal weapon tracking cyberware matrices.</span>
-                        <span data-lang="zh">专为智能靶向弹药系统量身定制的硬件级直连模块，完美将皮下武器追踪矩阵与手部微端进行融合。</span>
+                        Direct interface nodes engineered to bridge smart targeted ammunition systems cleanly with sub-dermal weapon tracking cyberware matrices.
                     </p>
                 </article>
             </div>
@@ -783,59 +688,29 @@
         <!-- Grounded Bottom Footer Baseline -->
         <footer class="footer-row">
             <div class="tagline">
-                <span data-lang="en">THIS IS KANGTAO. THIS IS INTELLIGENCE.</span>
-                <span data-lang="zh">这就是康陶。这就是智能。</span>
+                THIS IS KANGTAO. THIS IS INTELLIGENCE.
             </div>
             <!-- Grounded Bottom Right Segment -->
             <div class="portal-link">
                 <a id="footer-portal-link" href="https://2077.kangtao.co" target="_blank" aria-label="Visit the 2077 Kang Tao Portal">
-                    <span data-lang="en">// 2077 Portal</span>
-                    <span data-lang="zh">// 2077 传送门</span>
+                    // 2077 Portal
                 </a>
             </div>
         </footer>
 
         <!-- Absolute Bottom Segment: Support Links -->
         <div class="footer-help-row">
-            <span data-lang="en">For help <a id="footer-help-link" href="https://kangtao.co/help" class="help-link">click here</a></span>
-            <span data-lang="zh">如需帮助 <a id="footer-help-zh-link" href="https://kangtao.co/help-zh" class="help-link">点击此处</a></span>
+            For help <a id="footer-help-link" href="https://kangtao.co/help" class="help-link">click here</a>
         </div>
     </main>
 
     <!-- Navigation Routing & Localization Engine -->
     <script>
-        let currentLang = 'en';
-
-        // Initialize Router state based on a ?lang= query param.
-        // NOTE: we deliberately avoid distinct paths like /zh here. This file is
-        // deployed as a single static page on GitHub Pages, which has no
-        // server-side rewrite rules -- a real /zh path would 404 on direct visit
-        // or refresh. A query string on the same "/" path never 404s.
-        function resolveInitialRoute() {
-            const params = new URLSearchParams(window.location.search);
-            const requestedLang = params.get('lang');
-
-            if (requestedLang === 'zh') {
-                setLanguage('zh', false);
-            } else {
-                setLanguage('en', false);
-            }
-        }
-
-        function handleLogoClick(event) {
-            event.preventDefault();
-            switchTab('overview');
-            window.scrollTo({ top: 0, behavior: 'smooth' });
-            return false;
-        }
-
+        /* STREAMING_CHUNK: Initializing interactive tab switching engine... */
         function switchTab(tabName) {
             // Update UI Tab States within index
             document.querySelectorAll('.tab-panel').forEach(panel => panel.classList.remove('active'));
-            document.querySelectorAll('.nav-links button').forEach(btn => {
-                btn.classList.remove('active');
-                btn.setAttribute('aria-selected', 'false');
-            });
+            document.querySelectorAll('.nav-links button').forEach(btn => btn.classList.remove('active'));
             
             const targetPanel = document.getElementById('tab-' + tabName);
             const targetButton = document.getElementById('btn-' + tabName);
@@ -848,62 +723,7 @@
 
             window.scrollTo({ top: 0, behavior: 'smooth' });
         }
-
-        function setLanguage(lang, updateHistory = true) {
-            currentLang = lang;
-
-            if (updateHistory) {
-                const targetSearch = lang === 'zh' ? '?lang=zh' : window.location.pathname;
-                const targetUrl = lang === 'zh'
-                    ? window.location.pathname + '?lang=zh'
-                    : window.location.pathname;
-                window.history.pushState({ lang: lang }, '', targetUrl);
-            }
-
-            // Sync structural Body variables
-            if (lang === 'zh') {
-                document.body.classList.remove('lang-en');
-                document.body.classList.add('lang-zh');
-                document.getElementById('lang-zh').classList.add('active');
-                document.getElementById('lang-en').classList.remove('active');
-            } else {
-                document.body.classList.remove('lang-zh');
-                document.body.classList.add('lang-en');
-                document.getElementById('lang-en').classList.add('active');
-                document.getElementById('lang-zh').classList.remove('active');
-            }
-
-            // Sync dynamic context-aware absolute external paths
-            const shopBanner = document.getElementById('header-shop-banner');
-            const portalLink = document.getElementById('footer-portal-link');
-            const helpLink = document.getElementById('footer-help-link');
-            const helpZhLink = document.getElementById('footer-help-zh-link');
-
-            if (shopBanner) {
-                shopBanner.setAttribute('href', lang === 'zh' ? 'https://shop.kangtao.co/zh' : 'https://shop.kangtao.co');
-            }
-            if (portalLink) {
-                portalLink.setAttribute('href', lang === 'zh' ? 'https://2077.kangtao.co/zh' : 'https://2077.kangtao.co');
-            }
-            if (helpLink) {
-                helpLink.setAttribute('href', 'https://kangtao.co/help');
-            }
-            if (helpZhLink) {
-                helpZhLink.setAttribute('href', 'https://kangtao.co/help-zh');
-            }
-        }
-
-        window.addEventListener('popstate', (event) => {
-            if (event.state && event.state.lang) {
-                setLanguage(event.state.lang, false);
-            } else {
-                resolveInitialRoute();
-            }
-        });
-
-        window.onload = function() {
-            resolveInitialRoute();
-        };
     </script>
 </body>
 </html>
+```eof
