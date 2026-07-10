@@ -5,38 +5,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <!-- PRIMARY SEARCH ENGINE METADATA -->
-    <title>KANG TAO // Advanced Intelligent Electronic Solutions</title>
-    <meta name="description" content="Official database for Kang Tao. Manufacturers of smart ammunition, autonomous defense assets, quantum encryption networks, and QianT implants.">
-    <meta name="keywords" content="Kang Tao, Smart Weapons, Cyberware, QianT, Sandevistan, Neural Upgrades, Cyberpunk Defense">
+    <title>KANG TAO // Gateway</title>
+    <meta name="description" content="Official Gateway portal for Kang Tao. Access tactical defense gear, network components, and secure portals.">
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://kangtao.co">
 
-    <!-- OPEN GRAPH PREVIEW METADATA -->
-    <meta property="og:title" content="KANG TAO // Advanced Intelligent Electronic Solutions">
-    <meta property="og:description" content="Discover advanced tactical smart firearms, security grids, and cybernetic nervous enhancements designed by Kang Tao.">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://kangtao.co">
-    <meta property="og:image" content="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='%23060606'/%3E%3Cpolygon points='15,20 92,20 85,80 8,80' fill='%23ff5500'/%3E%3Ctext x='47%25' y='55%25' font-family='Noto Sans SC, sans-serif' font-weight='900' font-size='42' fill='%23060606' text-anchor='middle' dominant-baseline='central'%3E康陶%3C/text%3E%3C/svg%3E">
-
-    <!-- TWITTER CARDS PREVIEW METADATA -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="KANG TAO // Tactical Solutions">
-    <meta name="twitter:description" content="Deploy elite smart-targeting weapons platforms and military-grade network security schemas.">
-    <meta name="twitter:image" content="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='%23060606'/%3E%3Cpolygon points='15,20 92,20 85,80 8,80' fill='%23ff5500'/%3E%3Ctext x='47%25' y='55%25' font-family='Noto Sans SC, sans-serif' font-weight='900' font-size='42' fill='%23060606' text-anchor='middle' dominant-baseline='central'%3E康陶%3C/text%3E%3C/svg%3E">
-
-    <!-- Optimized Corporate Favicon based on Screenshot_20260704_010930_Samsung Browser.png -->
-    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='%23060606'/%3E%3Cpolygon points='15,20 92,20 85,80 8,80' fill='%23ff5500'/%3E%3Ctext x='47%25' y='55%25' font-family='Noto Sans SC, sans-serif' font-weight='900' font-size='42' fill='%23060606' text-anchor='middle' dominant-baseline='central'%3E康陶%3C/text%3E%3C/svg%3E">
+    <!-- Optimized Corporate Favicon based on vector artwork -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='%23060606'/%3E%3Cpolygon points='15,20 92,20 85,80 8,80' fill='%23ff5500'/%3E%3Cpath d='M30,35 L70,35 M50,25 L50,35 M35,35 L35,65 M40,42 L60,42 M50,42 L50,57 M40,50 L60,50 M41,57 L35,65 M59,57 L65,65' stroke='%23060606' stroke-width='4' stroke-linecap='round' stroke-linejoin='round' fill='none'/%3E%3C/svg%3E">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Noto+Sans+SC:wght@900&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;700;900&display=swap" rel="stylesheet">
     
-    <!-- STREAMING_CHUNK: Configuring style variables and basic rules... -->
     <style>
         :root {
             --bg-color: #060606;
-            --surface-card: #0f0f12;
-            --surface-hover: #15151a;
             --orange-primary: #ff5500;
             --orange-glow: rgba(255, 85, 0, 0.4);
             --text-main: #ffffff;
@@ -50,16 +33,14 @@
             padding: 0;
         }
 
-        *:focus-visible {
-            outline: 2px solid var(--orange-primary);
-            outline-offset: 4px;
-        }
-
         body {
             background-color: var(--bg-color);
             color: var(--text-main);
             font-family: 'Plus Jakarta Sans', sans-serif;
             min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
             overflow-x: hidden;
             position: relative;
         }
@@ -77,306 +58,85 @@
             pointer-events: none;
         }
 
-        /* --- TOP SHOP ANNOUNCEMENT BANNER --- */
-        .top-shop-banner {
-            width: 100%;
-            background-color: #0c0c0e;
-            border-bottom: 1px solid var(--border-color);
-            text-align: center;
-            padding: 0.6rem 1rem;
-            position: relative;
-            z-index: 101;
-        }
-
-        .top-shop-banner a {
-            font-family: 'Plus Jakarta Sans', sans-serif;
-            font-size: 0.72rem;
-            font-weight: 600;
-            color: var(--text-muted);
-            text-decoration: none;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            transition: all 0.3s ease;
-        }
-
-        .top-shop-banner a span.highlight {
-            color: var(--orange-primary);
-            text-shadow: 0 0 8px var(--orange-glow);
-            text-decoration: underline;
-            text-underline-offset: 3px;
-        }
-
-        .top-shop-banner a:hover {
-            color: #ffffff;
-        }
-
-        /* --- STREAMING_CHUNK: Styling layout header and logo components... --> */
-        /* --- GLOBAL NAVIGATION STRUCT --- */
-        nav {
-            width: 100%;
-            border-bottom: 1px solid var(--border-color);
-            background: rgba(6, 6, 6, 0.85);
-            backdrop-filter: blur(16px);
-            position: sticky;
-            top: 0;
-            z-index: 100;
-            padding: 0 2rem;
+        main {
+            flex-grow: 1;
             display: flex;
             flex-direction: column;
-        }
-
-        .nav-top-row {
-            display: flex;
             justify-content: center;
             align-items: center;
-            padding: 1.2rem 0 1rem 0;
-            width: 100%;
-        }
-
-        .nav-logo {
-            display: flex;
-            align-items: center;
-            text-decoration: none;
-            cursor: pointer;
-        }
-
-        /* Rendered as an image element directly containing vector-rendered corporate identity */
-        .logo-img {
-            height: 38px;
-            width: auto;
-            display: block;
-        }
-
-        /* --- STREAMING_CHUNK: Styling corporate tabs and hover state vectors... --> */
-        .nav-bottom-row {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            padding-bottom: 0.8rem;
-            width: 100%;
-        }
-
-        .nav-links {
-            display: flex;
-            gap: 0.5rem;
-            list-style: none;
-            font-family: 'Plus Jakarta Sans', sans-serif;
-            font-size: 0.75rem;
-            letter-spacing: 1.5px;
-        }
-
-        .nav-links button {
-            background: none;
-            border: 1px solid transparent;
-            color: var(--text-muted);
-            cursor: pointer;
-            transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
-            text-transform: uppercase;
-            font-family: inherit;
-            font-size: inherit;
-            letter-spacing: inherit;
-            font-weight: 600;
-            padding: 0.5rem 1rem;
-            border-radius: 4px;
-        }
-
-        .nav-links button:hover {
-            color: #ffffff;
-            background: rgba(255, 255, 255, 0.02);
-        }
-
-        .nav-links button.active {
-            color: var(--orange-primary);
-            border-color: rgba(255, 85, 0, 0.2);
-            background: rgba(255, 85, 0, 0.03);
-            font-weight: 700;
-        }
-
-        /* --- LAYOUT WRAPPER --- */
-        main {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 4rem 2rem;
-            position: relative;
+            padding: 2rem;
             z-index: 1;
         }
 
-        .tab-panel {
-            display: none;
-            opacity: 0;
-            transform: translateY(10px);
-            transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
-        }
-
-        .tab-panel.active {
-            display: block;
-            opacity: 1;
-            transform: translateY(0);
-        }
-
-        /* --- HERO PORTAL PANEL --- */
-        .hero-section {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 50vh;
-            width: 100%;
-        }
-
-        .container {
-            background: linear-gradient(180deg, #111113 0%, rgba(17, 17, 19, 0.95) 85%, rgba(6, 6, 6, 0) 100%);
+        /* Centered Gateway Card Container */
+        .gateway-card {
+            background: linear-gradient(180deg, #111113 0%, rgba(17, 17, 19, 0.95) 85%, rgba(6, 6, 6, 0.2) 100%);
             border: 1px solid var(--border-color);
-            border-bottom: 1px solid transparent;
-            padding: 6rem 2rem 5rem 2rem;
-            border-radius: 24px 24px 0 0;
+            padding: 5rem 3rem;
+            border-radius: 24px;
+            box-shadow: 0 40px 80px rgba(0, 0, 0, 0.75);
+            max-width: 620px;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
             text-align: center;
-            width: 100%;
-            max-width: 760px;
-            box-shadow: 0 40px 80px rgba(0,0,0,0.7);
-            display: flex;
-            flex-direction: column;
-            align-items: center;
         }
 
-        .brand-header-block {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            width: 100%;
-            margin-bottom: 4rem;
+        /* --- STREAMING_CHUNK: Integrating the vector logo assets... --> */
+        /* Brand Graphic SVG container ensures characters are treated strictly as vector images */
+        .brand-vector {
+            width: 280px;
+            height: auto;
+            margin-bottom: 3.5rem;
+            filter: drop-shadow(0 0 12px rgba(255, 85, 0, 0.2));
         }
 
-        .hero-logo-img {
-            height: 62px;
-            width: auto;
-            margin-bottom: 2rem;
-        }
-
-        .slogan-container { display: flex; align-items: center; width: 100%; max-width: 540px; gap: 16px; }
-        .orange-line { flex-grow: 1; height: 1px; background-color: var(--orange-primary); box-shadow: 0 0 6px var(--orange-glow); }
-        .slogan-sub { font-family: 'Plus Jakarta Sans', sans-serif; font-size: 0.85rem; font-weight: 700; color: var(--orange-primary); letter-spacing: 4px; text-indent: 4px; white-space: nowrap; text-transform: uppercase; }
-
-        .status-block {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 1.2rem;
-        }
-
-        .badge-deployment {
+        /* Elegant High-Contrast Shop Redirect Button */
+        .shop-button {
             display: inline-block;
-            background: rgba(15, 15, 17, 0.8);
-            padding: 0.6rem 2.2rem;
-            font-size: 0.85rem;
-            font-weight: 700;
-            text-transform: uppercase;
-            letter-spacing: 3px;
-            border-radius: 4px;
-            color: #ffffff;
-            box-shadow: -2px 0 8px rgba(255, 0, 0, 0.5), 0px 0 8px rgba(0, 255, 0, 0.3), 2px 0 8px rgba(0, 102, 255, 0.5);
-            animation: rgbShift 4s infinite linear;
-        }
-
-        @keyframes rgbShift {
-            0%, 100% { box-shadow: -2px -2px 10px rgba(255,0,0,0.5), 2px 2px 10px rgba(0,102,255,0.5); }
-            33% { box-shadow: 2px -2px 10px rgba(0,255,0,0.5), -2px 2px 10px rgba(255,0,0,0.5); }
-            66% { box-shadow: -2px 2px 10px rgba(0,102,255,0.5), 2px -2px 10px rgba(0,255,0,0.5); }
-        }
-
-        .timeline-text { color: var(--orange-primary); font-family: 'Plus Jakarta Sans', sans-serif; font-size: 0.95rem; font-weight: 600; letter-spacing: 2px; }
-
-        /* --- STREAMING_CHUNK: Creating layout grids and tech card components... --> */
-        /* --- MODERN GRID MODULE MATRIX --- */
-        .section-title {
+            background-color: var(--orange-primary);
+            color: #060606;
             font-family: 'Plus Jakarta Sans', sans-serif;
-            font-weight: 700;
-            font-size: 1.3rem;
+            font-weight: 800;
+            font-size: 0.95rem;
             letter-spacing: 2px;
             text-transform: uppercase;
-            margin-bottom: 3rem;
-            border-left: 4px solid var(--orange-primary);
-            padding-left: 16px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-        
-        .section-title span { color: var(--text-muted); font-size: 0.8rem; font-family: 'Share Tech Mono'; letter-spacing: 1px; }
-
-        .system-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 1.5rem;
+            text-decoration: none;
+            padding: 1.1rem 3rem;
+            border-radius: 8px;
+            box-shadow: 0 0 20px var(--orange-glow);
+            transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
         }
 
-        .tech-card {
-            background-color: var(--surface-card);
-            border: 1px solid var(--border-color);
-            padding: 2.5rem 2rem;
-            border-radius: 12px;
-            position: relative;
-            overflow: hidden;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            min-height: 280px;
-            transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+        .shop-button:hover {
+            background-color: #ffffff;
+            box-shadow: 0 0 30px rgba(255, 255, 255, 0.4);
+            transform: translateY(-2px);
         }
 
-        .tech-card::before {
-            content: '';
-            position: absolute;
-            top: 0; left: 0; width: 100%; height: 2px;
-            background: linear-gradient(90deg, transparent, var(--orange-primary), transparent);
-            transform: translateX(-100%);
-            transition: transform 0.6s ease;
-        }
-
-        .tech-card:hover {
-            background-color: var(--surface-hover);
-            border-color: rgba(255, 85, 0, 0.3);
-            transform: translateY(-4px);
-            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4);
-        }
-
-        .tech-card:hover::before { transform: translateX(100%); }
-
-        .card-meta { display: flex; flex-direction: column; gap: 0.4rem; margin-bottom: 1.5rem; }
-        .card-id { font-family: 'Share Tech Mono'; color: var(--orange-primary); font-size: 0.8rem; letter-spacing: 1px; }
-        .card-title { font-family: 'Plus Jakarta Sans', sans-serif; font-size: 1.25rem; font-weight: 700; color: #ffffff; }
-        .card-desc { color: var(--text-muted); font-family: 'Plus Jakarta Sans', sans-serif; font-size: 0.88rem; line-height: 1.6; font-weight: 400; }
-
-        /* --- GEOMETRIC FOOTER FRAMEWORK --- */
+        /* --- STREAMING_CHUNK: Formatting layout absolute anchors... --> */
+        /* Grounded Bottom Footer Segments */
         .footer-row {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
             width: 100%;
-            border-top: 1px solid rgba(255, 255, 255, 0.03);
-            padding-top: 2.5rem;
-            margin-top: 6rem;
-            margin-bottom: 1rem;
+            padding: 2.5rem;
+            display: flex;
+            justify-content: flex-end;
+            z-index: 2;
+            pointer-events: auto;
         }
 
-        .tagline { 
-            font-family: 'Plus Jakarta Sans', sans-serif; 
-            font-size: 0.8rem; 
-            font-weight: 600; 
-            color: rgba(255, 255, 255, 0.2); 
-            letter-spacing: 3px; 
-            text-transform: uppercase; 
-            text-align: left; 
+        .portal-link {
+            font-size: 0.8rem;
+            font-weight: 600;
+            letter-spacing: 2px;
+            text-transform: uppercase;
         }
 
         .portal-link a {
-            font-family: 'Plus Jakarta Sans', sans-serif;
-            font-size: 0.8rem;
-            font-weight: 600;
             color: rgba(255, 255, 255, 0.25);
             text-decoration: none;
-            letter-spacing: 2px;
             transition: all 0.3s ease;
-            text-transform: uppercase;
         }
 
         .portal-link a:hover {
@@ -384,346 +144,53 @@
             text-shadow: 0 0 8px var(--orange-glow);
         }
 
-        .footer-help-row {
-            width: 100%;
-            text-align: center;
-            padding: 1.5rem 0 3rem 0;
-            border-top: 1px solid rgba(255, 255, 255, 0.02);
-            font-family: 'Plus Jakarta Sans', sans-serif;
-            font-size: 0.78rem;
-            font-weight: 400;
-            color: var(--text-muted);
-            letter-spacing: 0.5px;
-        }
-
-        .help-link {
-            color: var(--text-muted);
-            text-decoration: underline;
-            text-underline-offset: 3px;
-            transition: color 0.3s ease, text-shadow 0.3s ease;
-            font-weight: 500;
-        }
-
-        .help-link:hover {
-            color: var(--orange-primary);
-            text-shadow: 0 0 8px var(--orange-glow);
-        }
-
-        @media (max-width: 1024px) {
-            .system-grid { grid-template-columns: repeat(2, 1fr); gap: 1.2rem; }
-        }
-
-        @media (max-width: 768px) {
-            nav { padding: 1rem; }
-            .nav-top-row { flex-direction: row; justify-content: center; padding: 0.5rem 0 1rem 0; }
-            .nav-bottom-row { padding-bottom: 0.5rem; }
-            
-            .nav-links { gap: 0.2rem; flex-wrap: wrap; justify-content: center; width: 100%; }
-            .nav-links button { padding: 0.5rem 0.6rem; font-size: 0.7rem; }
-            .system-grid { grid-template-columns: 1fr; gap: 1rem; }
-            
-            main { padding: 2rem 1rem; }
-            .container { padding: 4rem 1.5rem 3rem 1.5rem; }
-            .hero-logo-img { height: 44px; margin-bottom: 1.5rem; }
-            .slogan-sub { font-size: 0.8rem; letter-spacing: 4px; }
-            .slogan-container { gap: 10px; }
-            
-            .tech-card { min-height: auto; padding: 2rem 1.5rem; }
-            .section-title { font-size: 1.1rem; flex-direction: column; align-items: flex-start; gap: 0.5rem; }
-
-            .footer-row { padding-top: 2rem; margin-top: 4rem; flex-direction: column; gap: 1rem; justify-content: center; }
-            .tagline { font-size: 0.65rem; letter-spacing: 2.5px; text-align: center; }
-            .portal-link { text-align: center; }
-            .footer-help-row { padding-bottom: 2rem; }
+        @media (max-width: 600px) {
+            .gateway-card {
+                padding: 4rem 1.5rem;
+            }
+            .brand-vector {
+                width: 220px;
+                margin-bottom: 2.5rem;
+            }
+            .shop-button {
+                padding: 1rem 2rem;
+                font-size: 0.85rem;
+            }
+            .footer-row {
+                justify-content: center;
+                padding: 2rem;
+            }
         }
     </style>
 </head>
 <body>
 
-    <!-- Absolute Highest Priority Announcement Banner -->
-    <div class="top-shop-banner">
-        <a id="header-shop-banner" href="https://shop.kangtao.co">
-            FOR THE KANGTAO SHOP <span class="highlight">CLICK HERE</span>
-        </a>
-    </div>
-
-    <!-- Integrated Structural Navigation Header Matrix -->
-    <header>
-        <nav aria-label="Global Directory">
-            <div class="nav-top-row">
-                <a class="nav-logo" href="/" onclick="switchTab('overview')" aria-label="Kang Tao Home">
-                    <!-- Stylized SVG logo outputting vector Chinese characters with English typography in one image file context -->
-                    <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 310 60'%3E%3Crect width='310' height='60' fill='none'/%3E%3Cpolygon points='10,10 110,10 95,50 10,50' fill='%23ff5500'/%3E%3Ctext x='53' y='33' font-family='Noto Sans SC, sans-serif' font-weight='900' font-size='24' fill='%23060606' text-anchor='middle' dominant-baseline='central'%3E康陶%3C/text%3E%3Ctext x='130' y='34' font-family='Orbitron, sans-serif' font-weight='900' font-size='26' fill='%23ffffff' dominant-baseline='central'%3EKANG%3C/text%3E%3Ctext x='212' y='34' font-family='Orbitron, sans-serif' font-weight='900' font-size='26' fill='%23ff5500' dominant-baseline='central'%3ETAO%3C/text%3E%3C/svg%3E" alt="Kang Tao Logo Image" class="logo-img">
-                </a>
-            </div>
-
-            <div class="nav-bottom-row">
-                <ul class="nav-links" role="tablist">
-                    <li role="presentation">
-                        <button id="btn-overview" class="active" onclick="switchTab('overview')" role="tab" aria-selected="true" aria-controls="tab-overview">
-                            Overview
-                        </button>
-                    </li>
-                    <li role="presentation">
-                        <button id="btn-products" onclick="switchTab('products')" role="tab" aria-selected="false" aria-controls="tab-products">
-                            Products
-                        </button>
-                    </li>
-                    <li role="presentation">
-                        <button id="btn-defense" onclick="switchTab('defense')" role="tab" aria-selected="false" aria-controls="tab-defense">
-                            Defense
-                        </button>
-                    </li>
-                    <li role="presentation">
-                        <button id="btn-network" onclick="switchTab('network')" role="tab" aria-selected="false" aria-controls="tab-network">
-                            Network
-                        </button>
-                    </li>
-                    <li role="presentation">
-                        <button id="btn-qiant" onclick="switchTab('qiant')" role="tab" aria-selected="false" aria-controls="tab-qiant">
-                            QianT
-                        </button>
-                    </li>
-                </ul>
-            </div>
-        </nav>
-    </header>
-
     <main>
-        
-        <!-- MODULE PORTAL 01: CORPORATE OVERVIEW -->
-        <section id="tab-overview" class="tab-panel active" role="tabpanel" aria-labelledby="btn-overview">
-            <div class="hero-section">
-                <div class="container">
-                    <div class="brand-header-block">
-                        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 310 60'%3E%3Crect width='310' height='60' fill='none'/%3E%3Cpolygon points='10,10 110,10 95,50 10,50' fill='%23ff5500'/%3E%3Ctext x='53' y='33' font-family='Noto Sans SC, sans-serif' font-weight='900' font-size='24' fill='%23060606' text-anchor='middle' dominant-baseline='central'%3E康陶%3C/text%3E%3Ctext x='130' y='34' font-family='Orbitron, sans-serif' font-weight='900' font-size='26' fill='%23ffffff' dominant-baseline='central'%3EKANG%3C/text%3E%3Ctext x='212' y='34' font-family='Orbitron, sans-serif' font-weight='900' font-size='26' fill='%23ff5500' dominant-baseline='central'%3ETAO%3C/text%3E%3C/svg%3E" alt="Kang Tao Logo Emblem" class="hero-logo-img">
-                        <div class="slogan-container">
-                            <div class="orange-line" aria-hidden="true"></div>
-                            <div class="slogan-sub">
-                                Advanced Intelligent Electronic Solutions
-                            </div>
-                            <div class="orange-line" aria-hidden="true"></div>
-                        </div>
-                    </div>
-                    <div class="status-block">
-                        <div class="badge-deployment">
-                            Early Development
-                        </div>
-                        <div class="timeline-text">
-                            FULL WEBSITE DEPLOYMENT COMING SOON // Q3 2026
-                        </div>
-                    </div>
-                </div>
-            </div>
+        <section class="gateway-card" aria-label="Kang Tao Identity Portal">
+            <!-- Vector graphics file layout containing logo geometric shapes and English branding only -->
+            <svg class="brand-vector" viewBox="0 0 310 90" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <polygon points="10,10 110,10 95,50 10,50" fill="%23ff5500"/>
+                <path d="M25,23 L55,23 M40,16 L40,23 M29,23 L29,44 M33,28 L48,28 M40,28 L40,39 M33,33 L48,33 M34,39 L29,44 M46,39 L51,44" stroke="%23060606" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+                <path d="M62,20 L62,44 M62,20 C68,20 68,26 62,26 C68,26 68,32 62,32 M72,23 L90,23 M76,28 L86,28 L86,36 L76,36 Z M76,32 L86,32 M81,36 L81,44 M74,44 L88,44" stroke="%23060606" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+                <text x="130" y="34" font-family="'Plus Jakarta Sans', sans-serif" font-weight="900" font-size="26" fill="%23ffffff" dominant-baseline="central">KANG</text>
+                <text x="212" y="34" font-family="'Plus Jakarta Sans', sans-serif" font-weight="900" font-size="26" fill="%23ff5500" dominant-baseline="central">TAO</text>
+            </svg>
+
+            <!-- Clean link redirect to shop -->
+            <a href="https://kangtao.co/shop" class="shop-button">
+                Official Shop
+            </a>
         </section>
-
-        <!-- MODULE PORTAL 02: PRODUCTS -->
-        <section id="tab-products" class="tab-panel" role="tabpanel" aria-labelledby="btn-products">
-            <h2 class="section-title">
-                Smart Weapon Armaments <span>KT-ARMORY // FIREARMS_DIVISION</span>
-            </h2>
-            <div class="system-grid">
-                <article class="tech-card">
-                    <div class="card-meta">
-                        <span class="card-id">KT-A22 // SMART PISTOL</span>
-                        <h3 class="card-title">
-                            A-22B Chao
-                        </h3>
-                    </div>
-                    <p class="card-desc">
-                        The corporate standard smart handgun. Fires micro-missiles utilizing a multi-barrel configuration to instantly lock and track multiple evasive threats simultaneously.
-                    </p>
-                </article>
-                <article class="tech-card">
-                    <div class="card-meta">
-                        <span class="card-id">KT-G58 // SMART SUBMACHINE GUN</span>
-                        <h3 class="card-title">
-                            G-58 Dian
-                        </h3>
-                    </div>
-                    <p class="card-desc">
-                        An ultra-high fire rate defense asset. Operates a smart macro-targeting matrix that delivers surgical accuracy over close-quarters skirmishes without manual correction.
-                    </p>
-                </article>
-                <article class="tech-card">
-                    <div class="card-meta">
-                        <span class="card-id">KT-L69 // SMART SHOTGUN</span>
-                        <h3 class="card-title">
-                            L-69 Zhuo
-                        </h3>
-                    </div>
-                    <p class="card-desc">
-                        A heavy-ordnance tactical variant. Fires micro-guided pellet cluster bursts that pattern precisely over a targeted neural grid array for maximum termination efficiency.
-                    </p>
-                </article>
-            </div>
-        </section>
-
-        <!-- MODULE PORTAL 03: DEFENSE APPARATUS -->
-        <section id="tab-defense" class="tab-panel" role="tabpanel" aria-labelledby="btn-defense">
-            <h2 class="section-title">
-                Corporate Defense Infrastructures <span>KT-DEF // SECURE_SHIELD</span>
-            </h2>
-            <div class="system-grid">
-                <article class="tech-card">
-                    <div class="card-meta">
-                        <span class="card-id">KT-DF01 // NEURAL BARRIER</span>
-                        <h3 class="card-title">
-                            Aegis Grid Overhaul
-                        </h3>
-                    </div>
-                    <p class="card-desc">
-                        Hardware-based sub-dermal shield buffers that counter external tracking and jam rogue electronic interception vectors completely.
-                    </p>
-                </article>
-                <article class="tech-card">
-                    <div class="card-meta">
-                        <span class="card-id">KT-DF02 // HARDWARE MASKING</span>
-                        <h3 class="card-title">
-                            ICE-Wall Fortification
-                        </h3>
-                    </div>
-                    <p class="card-desc">
-                        Military-grade cryptographic firmware protections guarding corporate cybernetic links against invasive neural architecture breaches.
-                    </p>
-                </article>
-                <article class="tech-card">
-                    <div class="card-meta">
-                        <span class="card-id">KT-DF03 // PERSONNEL EXTRACTION</span>
-                        <h3 class="card-title">
-                            Autonomous Extraction Drone
-                        </h3>
-                    </div>
-                    <p class="card-desc">
-                        Automated airborne assets linked directly into VIP vitals tracking matrices, ready to deploy immediate suppressive covering layouts during perimeter stress events.
-                    </p>
-                </article>
-            </div>
-        </section>
-
-        <!-- MODULE PORTAL 04: GLOBAL NETWORK ARRAYS -->
-        <section id="tab-network" class="tab-panel" role="tabpanel" aria-labelledby="btn-network">
-            <h2 class="section-title">
-                Global Quantum Network Array <span>KT-NET // DATA_MATRIX</span>
-            </h2>
-            <div class="system-grid">
-                <article class="tech-card">
-                    <div class="card-meta">
-                        <span class="card-id">KT-NW01 // SECURE RELAY</span>
-                        <h3 class="card-title">
-                            Quantum Encryption Nodes
-                        </h3>
-                    </div>
-                    <p class="card-desc">
-                        Decentralized hyper-frequency transceiver relays preventing any data capture or packet decoding across interstellar deep-space frequencies.
-                    </p>
-                </article>
-                <article class="tech-card">
-                    <div class="card-meta">
-                        <span class="card-id">KT-NW02 // LINK MONITOR</span>
-                        <h3 class="card-title">
-                            Sub-Orbital Data Uplink
-                        </h3>
-                    </div>
-                    <p class="card-desc">
-                        Constellation satellite systems that route strategic assets across redundant processing facilities for uninterrupted operational communication.
-                    </p>
-                </article>
-                <article class="tech-card">
-                    <div class="card-meta">
-                        <span class="card-id">KT-NW03 // CYBER EYE</span>
-                        <h3 class="card-title">
-                            Sub-Net Scanning Arrays
-                        </h3>
-                    </div>
-                    <p class="card-desc">
-                        Real-time proactive intrusion counter-measurement systems mapping unauthorized subnet connections within regional infrastructure bounds.
-                    </p>
-                </article>
-            </div>
-        </section>
-
-        <!-- MODULE PORTAL 05: QIANT CYBERWARE SUBSIDIARY -->
-        <section id="tab-qiant" class="tab-panel" role="tabpanel" aria-labelledby="btn-qiant">
-            <h2 class="section-title">
-                QianT Cyberware Subsidiary <span>QIANT-BIO // NEURAL_UPGRADES</span>
-            </h2>
-            <div class="system-grid">
-                <article class="tech-card">
-                    <div class="card-meta">
-                        <span class="card-id">QT-MK4 // NERVOUS SYSTEM</span>
-                        <h3 class="card-title">
-                            QianT Sandevistan Mk.4
-                        </h3>
-                    </div>
-                    <p class="card-desc">
-                        The premiere military-grade neural processor expansion. Drastically optimizes temporal dilation, slowing down baseline perception to execute clean combat adjustments under pressure.
-                    </p>
-                </article>
-                <article class="tech-card">
-                    <div class="card-meta">
-                        <span class="card-id">QT-MK5 // REFLEX UPGRADE</span>
-                        <h3 class="card-title">
-                            QianT "Warp Dancer" Sandevistan Mk.5
-                        </h3>
-                    </div>
-                    <p class="card-desc">
-                        An elite hyper-tuned cybernetic array offering peak synchronization performance. Restructures synaptic pathways to squeeze unparalleled reflex responses out of highly trained operators.
-                    </p>
-                </article>
-                <article class="tech-card">
-                    <div class="card-meta">
-                        <span class="card-id">QT-CO03 // BIO-MONITOR</span>
-                        <h3 class="card-title">
-                            Co-Processor Cores
-                        </h3>
-                    </div>
-                    <p class="card-desc">
-                        Direct interface nodes engineered to bridge smart targeted ammunition systems cleanly with sub-dermal weapon tracking cyberware matrices.
-                    </p>
-                </article>
-            </div>
-        </section>
-
-        <!-- Grounded Bottom Footer Baseline -->
-        <footer class="footer-row">
-            <div class="tagline">
-                THIS IS KANGTAO. THIS IS INTELLIGENCE.
-            </div>
-            <!-- Grounded Bottom Right Segment -->
-            <div class="portal-link">
-                <a id="footer-portal-link" href="https://2077.kangtao.co" target="_blank" aria-label="Visit the 2077 Kang Tao Portal">
-                    // 2077 Portal
-                </a>
-            </div>
-        </footer>
-
-        <!-- Absolute Bottom Segment: Support Links -->
-        <div class="footer-help-row">
-            For help <a id="footer-help-link" href="https://kangtao.co/help" class="help-link">click here</a>
-        </div>
     </main>
 
-    <!-- Navigation Routing & Localization Engine -->
-    <script>
-        /* STREAMING_CHUNK: Initializing interactive tab switching engine... */
-        function switchTab(tabName) {
-            // Update UI Tab States within index
-            document.querySelectorAll('.tab-panel').forEach(panel => panel.classList.remove('active'));
-            document.querySelectorAll('.nav-links button').forEach(btn => btn.classList.remove('active'));
-            
-            const targetPanel = document.getElementById('tab-' + tabName);
-            const targetButton = document.getElementById('btn-' + tabName);
+    <footer class="footer-row">
+        <!-- Quiet bottom right link to the 2077 portal -->
+        <div class="portal-link">
+            <a href="https://2077.kangtao.co" target="_blank" aria-label="Visit the 2077 Portal">
+                // 2077 Portal
+            </a>
+        </div>
+    </footer>
 
-            if (targetPanel) targetPanel.classList.add('active');
-            if (targetButton) {
-                targetButton.classList.add('active');
-                targetButton.setAttribute('aria-selected', 'true');
-            }
-
-            window.scrollTo({ top: 0, behavior: 'smooth' });
-        }
-    </script>
 </body>
 </html>
-```eof
