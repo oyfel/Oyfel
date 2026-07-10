@@ -4,13 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <!-- PRIMARY SEARCH ENGINE METADATA -->
     <title>KANG TAO // Gateway</title>
     <meta name="description" content="Official Gateway portal for Kang Tao. Access tactical defense gear, network components, and secure portals.">
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://kangtao.co">
 
-    <!-- Optimized Corporate Favicon based on vector artwork -->
     <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='%23060606'/%3E%3Cpolygon points='15,20 92,20 85,80 8,80' fill='%23ff5500'/%3E%3Cpath d='M30,35 L70,35 M50,25 L50,35 M35,35 L35,65 M40,42 L60,42 M50,42 L50,57 M40,50 L60,50 M41,57 L35,65 M59,57 L65,65' stroke='%23060606' stroke-width='4' stroke-linecap='round' stroke-linejoin='round' fill='none'/%3E%3C/svg%3E">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -19,12 +17,14 @@
     
     <style>
         :root {
-            --bg-color: #060606;
+            --bg-color: #030304;
             --orange-primary: #ff5500;
-            --orange-glow: rgba(255, 85, 0, 0.4);
+            --orange-glow: rgba(255, 85, 0, 0.25);
+            --orange-glow-intense: rgba(255, 85, 0, 0.6);
             --text-main: #ffffff;
             --text-muted: #888890;
-            --border-color: #222226;
+            --border-color: rgba(255, 85, 0, 0.15);
+            --card-bg: rgba(14, 14, 17, 0.75);
         }
 
         * {
@@ -45,14 +45,16 @@
             position: relative;
         }
 
+        /* Ambient background lighting and grid */
         body::before {
             content: '';
             position: fixed;
             inset: 0;
             background-image: 
-                linear-gradient(rgba(255, 85, 0, 0.012) 1px, transparent 1px),
-                linear-gradient(90deg, rgba(255, 85, 0, 0.012) 1px, transparent 1px);
-            background-size: 50px 50px;
+                radial-gradient(circle at 50% 40%, rgba(255, 85, 0, 0.07) 0%, transparent 60%),
+                linear-gradient(rgba(255, 85, 0, 0.015) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(255, 85, 0, 0.015) 1px, transparent 1px);
+            background-size: 100% 100%, 60px 60px, 60px 60px;
             background-position: center;
             z-index: 0;
             pointer-events: none;
@@ -68,129 +70,36 @@
             z-index: 1;
         }
 
-        /* Centered Gateway Card Container */
+        /* Centered Gateway Card Container with enhanced lighting */
         .gateway-card {
-            background: linear-gradient(180deg, #111113 0%, rgba(17, 17, 19, 0.95) 85%, rgba(6, 6, 6, 0.2) 100%);
+            background: var(--card-bg);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
             border: 1px solid var(--border-color);
-            padding: 5rem 3rem;
+            padding: 4.5rem 3.5rem;
             border-radius: 24px;
-            box-shadow: 0 40px 80px rgba(0, 0, 0, 0.75);
-            max-width: 620px;
+            box-shadow: 
+                0 30px 60px rgba(0, 0, 0, 0.8),
+                0 0 50px rgba(255, 85, 0, 0.03);
+            max-width: 580px;
             width: 100%;
             display: flex;
             flex-direction: column;
             align-items: center;
             text-align: center;
+            position: relative;
+            animation: pulseGlow 8s infinite ease-in-out;
         }
 
-        /* --- STREAMING_CHUNK: Integrating the vector logo assets... --> */
-        /* Brand Graphic SVG container ensures characters are treated strictly as vector images */
+        /* Dynamic subtle background glow shift */
+        @keyframes pulseGlow {
+            0%, 100% { box-shadow: 0 30px 60px rgba(0, 0, 0, 0.8), 0 0 50px rgba(255, 85, 0, 0.03); border-color: rgba(255, 85, 0, 0.15); }
+            50% { box-shadow: 0 30px 60px rgba(0, 0, 0, 0.8), 0 0 70px rgba(255, 85, 0, 0.08); border-color: rgba(255, 85, 0, 0.3); }
+        }
+
+        /* Brand Graphic SVG container styling */
         .brand-vector {
-            width: 280px;
+            width: 290px;
             height: auto;
             margin-bottom: 3.5rem;
-            filter: drop-shadow(0 0 12px rgba(255, 85, 0, 0.2));
-        }
-
-        /* Elegant High-Contrast Shop Redirect Button */
-        .shop-button {
-            display: inline-block;
-            background-color: var(--orange-primary);
-            color: #060606;
-            font-family: 'Plus Jakarta Sans', sans-serif;
-            font-weight: 800;
-            font-size: 0.95rem;
-            letter-spacing: 2px;
-            text-transform: uppercase;
-            text-decoration: none;
-            padding: 1.1rem 3rem;
-            border-radius: 8px;
-            box-shadow: 0 0 20px var(--orange-glow);
-            transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
-        }
-
-        .shop-button:hover {
-            background-color: #ffffff;
-            box-shadow: 0 0 30px rgba(255, 255, 255, 0.4);
-            transform: translateY(-2px);
-        }
-
-        /* --- STREAMING_CHUNK: Formatting layout absolute anchors... --> */
-        /* Grounded Bottom Footer Segments */
-        .footer-row {
-            width: 100%;
-            padding: 2.5rem;
-            display: flex;
-            justify-content: flex-end;
-            z-index: 2;
-            pointer-events: auto;
-        }
-
-        .portal-link {
-            font-size: 0.8rem;
-            font-weight: 600;
-            letter-spacing: 2px;
-            text-transform: uppercase;
-        }
-
-        .portal-link a {
-            color: rgba(255, 255, 255, 0.25);
-            text-decoration: none;
-            transition: all 0.3s ease;
-        }
-
-        .portal-link a:hover {
-            color: var(--orange-primary);
-            text-shadow: 0 0 8px var(--orange-glow);
-        }
-
-        @media (max-width: 600px) {
-            .gateway-card {
-                padding: 4rem 1.5rem;
-            }
-            .brand-vector {
-                width: 220px;
-                margin-bottom: 2.5rem;
-            }
-            .shop-button {
-                padding: 1rem 2rem;
-                font-size: 0.85rem;
-            }
-            .footer-row {
-                justify-content: center;
-                padding: 2rem;
-            }
-        }
-    </style>
-</head>
-<body>
-
-    <main>
-        <section class="gateway-card" aria-label="Kang Tao Identity Portal">
-            <!-- Vector graphics file layout containing logo geometric shapes and English branding only -->
-            <svg class="brand-vector" viewBox="0 0 310 90" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                <polygon points="10,10 110,10 95,50 10,50" fill="%23ff5500"/>
-                <path d="M25,23 L55,23 M40,16 L40,23 M29,23 L29,44 M33,28 L48,28 M40,28 L40,39 M33,33 L48,33 M34,39 L29,44 M46,39 L51,44" stroke="%23060606" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
-                <path d="M62,20 L62,44 M62,20 C68,20 68,26 62,26 C68,26 68,32 62,32 M72,23 L90,23 M76,28 L86,28 L86,36 L76,36 Z M76,32 L86,32 M81,36 L81,44 M74,44 L88,44" stroke="%23060606" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
-                <text x="130" y="34" font-family="'Plus Jakarta Sans', sans-serif" font-weight="900" font-size="26" fill="%23ffffff" dominant-baseline="central">KANG</text>
-                <text x="212" y="34" font-family="'Plus Jakarta Sans', sans-serif" font-weight="900" font-size="26" fill="%23ff5500" dominant-baseline="central">TAO</text>
-            </svg>
-
-            <!-- Clean link redirect to shop -->
-            <a href="https://kangtao.co/shop" class="shop-button">
-                Official Shop
-            </a>
-        </section>
-    </main>
-
-    <footer class="footer-row">
-        <!-- Quiet bottom right link to the 2077 portal -->
-        <div class="portal-link">
-            <a href="https://2077.kangtao.co" target="_blank" aria-label="Visit the 2077 Portal">
-                // 2077 Portal
-            </a>
-        </div>
-    </footer>
-
-</body>
-</html>
+            filter: drop-shadow(0 0 2
